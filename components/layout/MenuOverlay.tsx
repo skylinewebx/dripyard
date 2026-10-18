@@ -9,6 +9,7 @@ import { useDialog } from "@/hooks/use-dialog";
 import { CloseIcon } from "@/components/ui/icons";
 
 const ITEMS: { label: string; href?: string; action?: "cart" }[] = [
+  { label: "Home", href: "/" },
   { label: "Shop All", href: "/shop" },
   { label: "New Arrivals", href: "/shop?new=1" },
   { label: "Basketball", href: "/shop?category=Basketball" },
@@ -73,7 +74,15 @@ function Panel() {
                   exit={{ y: 0 }}
                 >
                   {item.href ? (
-                    <Link href={item.href} onClick={close} className="group block rounded-md">
+                    <Link
+                      href={item.href}
+                      onClick={() => {
+                        close();
+                        // Already on the homepage: Home should still take you back to the top.
+                        if (item.href === "/" && window.location.pathname === "/") window.scrollTo({ top: 0 });
+                      }}
+                      className="group block rounded-md"
+                    >
                       {inner}
                     </Link>
                   ) : (
