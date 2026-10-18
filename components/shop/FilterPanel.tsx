@@ -14,6 +14,7 @@ const FAMILY_HEX: Record<string, string> = {
   Pink: "#e8a0b0",
   Purple: "#9c9acb",
   Orange: "#ef6a1a",
+  Yellow: "#f2c230",
   Brown: "#8a5326",
   Grey: "#8a8a8d",
   Cream: "#eadfc4",

@@ -1,4 +1,4 @@
-// Builds public/images/hero.webp from the supplied campaign image (assets/hero/ref-23.jpg).
+// Builds public/images/hero-mobile.webp (phones) from the supplied campaign image (assets/hero/ref-23.jpg).
 // The supplied image has its UI copy baked in. Only those text/UI rectangles are repainted by
 // harmonic (Laplace) interpolation from the surrounding smoke/floor, plus fine grain to match the
 // photo texture. The model, sneaker and composition are untouched. The copy is re-created as
@@ -88,7 +88,7 @@ await sharp(patched, { raw: { width: W, height: H, channels: 3 } })
   .modulate({ saturation: 1.03 })
   .sharpen({ sigma: 0.8, m1: 0.6, m2: 1.4 })
   .webp({ quality: 90, effort: 5 })
-  .toFile("public/images/hero.webp");
+  .toFile("public/images/hero-mobile.webp");
 
-const meta = await sharp("public/images/hero.webp").metadata();
+const meta = await sharp("public/images/hero-mobile.webp").metadata();
 console.log("hero.webp", meta.width, meta.height);

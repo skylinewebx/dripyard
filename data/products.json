@@ -910,5 +910,780 @@
       "13": 0
     },
     "verification": "Model identified; 'Chicago' colorway inferred from the white/red/black scheme and Nike Air tongue, please verify."
+  },
+  {
+    "id": "af1-low-mini-swoosh-red-purple",
+    "name": "Air Force 1 Low",
+    "colorway": "White / Red / Purple, Mini Swoosh",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "White / Red / Purple",
+        "hex": "#c8222a",
+        "families": [
+          "Red",
+          "White",
+          "Purple"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 88,
+    "description": "White leather with a bold red Swoosh and toe box, a deep purple collar and a contrasting gold mini Swoosh and Nike Air heel mark.",
+    "image": "/images/shoes/shoe-21.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 7,
+      "10": 6,
+      "11": 4,
+      "12": 2,
+      "13": 1
+    },
+    "verification": "Mini-Swoosh Air Force 1; likely a custom or special-edition colourway. Verify before selling. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "af1-low-grey-black-air",
+    "name": "Air Force 1 Low",
+    "colorway": "Grey / Black, AIR Midsole",
+    "brand": "Nike",
+    "price": 120,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Grey / Black",
+        "hex": "#9aa0a6",
+        "families": [
+          "Grey",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.6,
+    "reviewCount": 64,
+    "description": "Two-tone grey leather with a black Swoosh and heel, black laces and AIR and NIKE script printed along the white midsole.",
+    "image": "/images/shoes/shoe-22.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 1,
+      "7": 3,
+      "8": 6,
+      "9": 8,
+      "10": 7,
+      "11": 5,
+      "12": 3,
+      "13": 0
+    },
+    "verification": "Photo carries a creator credit (VIBLE OFFICIAL); may be a custom colourway. Verify. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj4-red-sail",
+    "name": "Air Jordan 4",
+    "colorway": "Red / Sail",
+    "brand": "Nike",
+    "price": 210,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Red / Sail",
+        "hex": "#d6402a",
+        "families": [
+          "Red",
+          "Orange",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 142,
+    "description": "Tonal red nubuck Jordan 4 with the signature wing eyelets and mesh panels, a visible Air unit, sail accents and a white mini Swoosh.",
+    "image": "/images/shoes/shoe-23.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 1,
+      "8": 3,
+      "9": 5,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 2
+    },
+    "verification": "Model identified as Air Jordan 4 from the silhouette. Colourway not verified. The photo also shows a third-party cap, which is not for sale."
+  },
+  {
+    "id": "aj3-sand-brown-elephant",
+    "name": "Air Jordan 3",
+    "colorway": "Sand / Brown, Elephant Print",
+    "brand": "Nike",
+    "price": 210,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Sand / Brown",
+        "hex": "#b98a5e",
+        "families": [
+          "Cream",
+          "Brown"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.9,
+    "reviewCount": 176,
+    "description": "Soft sand suede upper with brown and tan elephant-print overlays, a brown heel clip, visible Air unit and a white midsole.",
+    "image": "/images/shoes/shoe-24.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 1,
+      "8": 3,
+      "9": 5,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 2
+    },
+    "verification": "Model identified as Air Jordan 3 from the silhouette and elephant print. Colourway not verified. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj3-cream-orange",
+    "name": "Air Jordan 3",
+    "colorway": "Cream / Orange",
+    "brand": "Nike",
+    "price": 210,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Cream / Orange",
+        "hex": "#f0803c",
+        "families": [
+          "Cream",
+          "Orange",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 109,
+    "description": "Cream leather Jordan 3 with textured orange heel and toe overlays, orange lining, cream laces and a clear Air unit.",
+    "image": "/images/shoes/shoe-25.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 1,
+      "8": 3,
+      "9": 5,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 2
+    },
+    "verification": "Model identified as Air Jordan 3. Colourway not verified. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-high-og-patent-green",
+    "name": "Air Jordan 1 Retro High OG",
+    "colorway": "Patent Black / Green",
+    "brand": "Nike",
+    "price": 190,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Black / Green",
+        "hex": "#4cd10f",
+        "families": [
+          "Green",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 231,
+    "description": "Glossy patent black leather with electric green overlays, Swoosh and midsole edge on a white sole. Wings logo on the ankle strap.",
+    "image": "/images/shoes/shoe-26.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 7,
+      "10": 6,
+      "11": 4,
+      "12": 2,
+      "13": 1
+    },
+    "verification": "Model identified as Air Jordan 1 High OG (Jordan box in photo). Resembles the 'Rage Green' patent release but not confirmed. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "af1-low-red-black-double-swoosh",
+    "name": "Air Force 1 Low",
+    "colorway": "Red / Black, Double Swoosh",
+    "brand": "Nike",
+    "price": 130,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Red / Black / Gold",
+        "hex": "#d8201f",
+        "families": [
+          "Red",
+          "Black"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 121,
+    "description": "Smooth red leather with an oversized black Swoosh outlined in gold, a layered second Swoosh, black collar and oversized red laces.",
+    "image": "/images/shoes/shoe-27.webp",
+    "isNew": false,
+    "flashDropDiscount": 25,
+    "stock": {
+      "6": 2,
+      "7": 4,
+      "8": 7,
+      "9": 9,
+      "10": 8,
+      "11": 6,
+      "12": 4,
+      "13": 2
+    },
+    "verification": "Double-Swoosh Air Force 1 style. Colourway name not verified. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "af1-low-olive-black-double-swoosh",
+    "name": "Air Force 1 Low",
+    "colorway": "Olive Green / Black, Double Swoosh",
+    "brand": "Nike",
+    "price": 130,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Olive Green / Black",
+        "hex": "#7a8f56",
+        "families": [
+          "Green",
+          "Black"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 97,
+    "description": "Olive green leather with a black Swoosh outlined in gold, a layered second Swoosh, black collar and soft green laces.",
+    "image": "/images/shoes/shoe-28.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 7,
+      "10": 6,
+      "11": 4,
+      "12": 2,
+      "13": 1
+    },
+    "verification": "Double-Swoosh Air Force 1 style. Colourway name not verified. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "af1-shadow-multicolor",
+    "name": "Air Force 1 Shadow",
+    "colorway": "Sail / Blue / Yellow / Red",
+    "brand": "Nike",
+    "price": 130,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Sail / Blue / Yellow / Red",
+        "hex": "#3b7fd6",
+        "families": [
+          "White",
+          "Blue",
+          "Yellow",
+          "Red"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 154,
+    "description": "The layered Shadow take on the Air Force 1: doubled Swooshes and overlays in sail, blue, yellow and red with an exaggerated AIR heel.",
+    "image": "/images/shoes/shoe-29.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 1,
+      "7": 3,
+      "8": 6,
+      "9": 8,
+      "10": 7,
+      "11": 5,
+      "12": 3,
+      "13": 0
+    },
+    "verification": "Model identified as Air Force 1 Shadow from the doubled layering. Colourway not verified. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "af1-low-denim-navy-red",
+    "name": "Air Force 1 Low",
+    "colorway": "White / Navy Denim / Red",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "White / Navy / Red",
+        "hex": "#1f2f5e",
+        "families": [
+          "White",
+          "Blue",
+          "Red"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 133,
+    "description": "White leather with navy denim panels, a bright red collar lining and red AIR piping on the midsole.",
+    "image": "/images/shoes/shoe-30.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 7,
+      "10": 6,
+      "11": 4,
+      "12": 2,
+      "13": 1
+    },
+    "verification": "Photo carries a creator credit (@PurpleCarpetMiami); may be a custom or special-edition colourway. Verify. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-mocha-cream",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Brown / Cream",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Brown / Cream",
+        "hex": "#7a4a30",
+        "families": [
+          "Brown",
+          "Cream",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.6,
+    "reviewCount": 72,
+    "description": "Mocha and caramel brown leather with a cream base, textured overlays, brown Swoosh and dark laces on a white midsole.",
+    "image": "/images/shoes/shoe-32.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 2,
+      "7": 4,
+      "8": 7,
+      "9": 9,
+      "10": 8,
+      "11": 6,
+      "12": 4,
+      "13": 2
+    },
+    "verification": "Model identified as Air Jordan 1 Mid. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-high-og-seafoam",
+    "name": "Air Jordan 1 Retro High OG",
+    "colorway": "Seafoam",
+    "brand": "Nike",
+    "price": 180,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Seafoam / White",
+        "hex": "#b9c9b0",
+        "families": [
+          "Green",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 188,
+    "description": "Soft seafoam suede overlays on crisp white leather, a matching Swoosh and sole edge, with a Nike Air hangtag.",
+    "image": "/images/shoes/shoe-33.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 1,
+      "7": 3,
+      "8": 6,
+      "9": 8,
+      "10": 7,
+      "11": 5,
+      "12": 3,
+      "13": 0
+    },
+    "verification": "Model identified as Air Jordan 1 High OG. Resembles the 'Seafoam' release but not confirmed. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-high-distressed-denim",
+    "name": "Air Jordan 1 High",
+    "colorway": "Distressed Denim, Gold Lace Locks",
+    "brand": "Nike",
+    "price": 200,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Light Denim / White",
+        "hex": "#8fb0cc",
+        "families": [
+          "Blue",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 61,
+    "description": "Frayed light-wash denim overlays on white leather with a distressed Swoosh, denim ankle collar and gold lace-lock charms.",
+    "image": "/images/shoes/shoe-34.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 7,
+      "10": 6,
+      "11": 4,
+      "12": 2,
+      "13": 1
+    },
+    "verification": "Looks like a custom or limited denim edition (frayed denim, gold lace charms). Verify. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-drip-pink-black",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Pink / Black Paint Drip",
+    "brand": "Nike",
+    "price": 150,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Pink / Black / White",
+        "hex": "#ee6fb0",
+        "families": [
+          "Pink",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.6,
+    "reviewCount": 49,
+    "description": "White leather with black and pink paint-drip artwork across the toe, Swoosh and collar, black laces and a Jumpman AIR tongue tag.",
+    "image": "/images/shoes/shoe-35.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 2,
+      "7": 4,
+      "8": 7,
+      "9": 9,
+      "10": 8,
+      "11": 6,
+      "12": 4,
+      "13": 2
+    },
+    "verification": "Hand-painted look: almost certainly a custom colourway, not a Nike release. Verify. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-pink-white",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Pink / White",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Pink / White",
+        "hex": "#f49ac1",
+        "families": [
+          "Pink",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 167,
+    "description": "Soft pink leather overlays on a white base, a white Swoosh, Wings logo and white laces, finished with a pink midsole edge.",
+    "image": "/images/shoes/shoe-36.webp",
+    "isNew": false,
+    "flashDropDiscount": 15,
+    "stock": {
+      "6": 1,
+      "7": 3,
+      "8": 6,
+      "9": 8,
+      "10": 7,
+      "11": 5,
+      "12": 3,
+      "13": 0
+    },
+    "verification": "Photo carries a store watermark (Sneakers Lounge) and a third-party cap. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-university-blue-patent",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "University Blue Patent / White",
+    "brand": "Nike",
+    "price": 135,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "University Blue / White",
+        "hex": "#3a9be0",
+        "families": [
+          "Blue",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 103,
+    "description": "Glossy university blue patent overlays on white leather with a white Swoosh and a blue Wings logo.",
+    "image": "/images/shoes/shoe-37.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 2,
+      "7": 4,
+      "8": 7,
+      "9": 9,
+      "10": 8,
+      "11": 6,
+      "12": 4,
+      "13": 2
+    },
+    "verification": "Model identified as Air Jordan 1 Mid. Descriptive colourway: the official Nike colourway name was not verified from the photo."
+  },
+  {
+    "id": "aj1-high-og-unc-patent",
+    "name": "Air Jordan 1 Retro High OG",
+    "colorway": "UNC Patent",
+    "brand": "Nike",
+    "price": 190,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "University Blue / Navy / White",
+        "hex": "#58b4e8",
+        "families": [
+          "Blue",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.9,
+    "reviewCount": 264,
+    "description": "Glossy patent leather in university blue, navy and white with a navy Swoosh and a light-blue sole edge.",
+    "image": "/images/shoes/shoe-38.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 1,
+      "8": 3,
+      "9": 5,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 2
+    },
+    "verification": "Model identified as Air Jordan 1 High OG (Nike box in photo). Resembles the 'UNC Patent' release but not confirmed. Descriptive colourway: the official Nike colourway name was not verified from the photo."
   }
 ]
