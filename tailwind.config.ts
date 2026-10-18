@@ -9,6 +9,7 @@ const config: Config = {
         brand: "#b3202a",
         coral: "#d94a4a",
         cream: "#f6f1ea",
+        sun: "#f5e23b",
       },
       fontFamily: {
         display: ["'Oswald Variable'", "Oswald", "Impact", "'Arial Narrow'", "sans-serif"],

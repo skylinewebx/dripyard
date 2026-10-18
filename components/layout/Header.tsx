@@ -28,45 +28,57 @@ export default function Header() {
     if (next !== scrolled) setScrolled(next);
   });
 
+  // Over the hero the header is "open" (floating pieces, as in the campaign design); elsewhere it is one solid pill.
   const overHero = pathname === "/" && !scrolled;
-  const shell = overHero
-    ? "border-white/25 bg-white/10 text-white backdrop-blur-md"
-    : "border-maroon/10 bg-white/85 text-maroon shadow-card backdrop-blur-xl";
+  const shell = overHero ? "border-transparent text-white" : "border-maroon/10 bg-white/85 text-maroon shadow-card backdrop-blur-xl";
+  const navPill = overHero ? "border border-white/25 bg-black/25 backdrop-blur-md" : "";
   const iconBtn =
     "relative grid h-10 w-10 place-items-center rounded-full transition-colors duration-300 " +
-    (overHero ? "hover:bg-white/20" : "hover:bg-maroon/8");
+    (overHero ? "border border-white/30 bg-black/20 backdrop-blur-md hover:bg-white/20 sm:h-11 sm:w-11" : "hover:bg-maroon/8");
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 px-4 pt-4 sm:px-8 sm:pt-6">
+    <header className="fixed inset-x-0 top-0 z-40 px-4 pt-4 sm:px-10 sm:pt-7">
       <nav
         aria-label="Primary"
-        className={`mx-auto flex max-w-[1320px] items-center justify-between rounded-full border py-2 pl-5 pr-2 transition-[background-color,border-color,color,box-shadow] duration-500 ease-premium sm:pl-7 ${shell}`}
+        className={`mx-auto flex max-w-[1320px] items-center justify-between rounded-full border py-2 transition-[background-color,border-color,color,box-shadow] duration-500 ease-premium ${
+          overHero ? "px-1" : "pl-5 pr-2 sm:pl-7"
+        } ${shell}`}
       >
         <Link href="/" aria-label="DRIPYARD home" className="font-display text-xl font-bold uppercase tracking-[0.1em] sm:text-2xl">
           Dripyard
         </Link>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className={`hidden items-center gap-1 rounded-full p-1.5 lg:flex ${navPill}`}>
           {LINKS.map((l) => {
             const active = l.href === "/" ? pathname === "/" : l.href === "/about" && pathname === "/about";
             return (
-              <li key={l.label}>
+              <li key={l.label} className="relative">
                 <Link
                   href={l.href}
                   aria-current={active ? "page" : undefined}
-                  className={`relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
-                    active ? (overHero ? "bg-white/20" : "bg-maroon/8") : overHero ? "hover:bg-white/15" : "hover:bg-maroon/6"
+                  className={`inline-flex items-center rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300 ${
+                    active
+                      ? overHero
+                        ? "bg-white text-maroon"
+                        : "bg-maroon/8"
+                      : overHero
+                        ? "hover:bg-white/15"
+                        : "hover:bg-maroon/6"
                   }`}
                 >
                   {l.label}
-                  {l.badge && <span className="rounded-full bg-brand px-2 py-0.5 text-[10px] font-semibold uppercase leading-none tracking-wider text-white">{l.badge}</span>}
                 </Link>
+                {l.badge && (
+                  <span aria-hidden className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-sun px-1.5 py-0.5 text-[9px] font-semibold uppercase leading-none tracking-wide text-maroon">
+                    {l.badge}
+                  </span>
+                )}
               </li>
             );
           })}
         </ul>
 
-        <div className="flex items-center gap-0.5 sm:gap-1">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <button type="button" onClick={() => setCartOpen(true)} className={iconBtn} aria-label={`Open bag, ${count} ${count === 1 ? "item" : "items"}`}>
             <BagIcon />
             {count > 0 && (
@@ -84,7 +96,7 @@ export default function Header() {
             aria-expanded={menuOpen}
             aria-controls="site-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className={`${iconBtn} ${overHero ? "bg-white/15" : "bg-maroon/6"}`}
+            className={`${iconBtn} ${overHero ? "" : "bg-maroon/6"}`}
           >
             <MenuIcon />
           </button>
