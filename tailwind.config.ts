@@ -12,7 +12,7 @@ const config: Config = {
         sun: "#f5e23b",
       },
       fontFamily: {
-        display: ["'Oswald Variable'", "Oswald", "Impact", "'Arial Narrow'", "sans-serif"],
+        display: ["'Oswald Variable'", "Oswald Fallback", "Impact", "'Arial Narrow'", "sans-serif"],
         sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {

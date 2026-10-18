@@ -25,6 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <noscript>
+          <style>{".reveal,.split-word{opacity:1!important;transform:none!important;transition:none!important}"}</style>
+        </noscript>
         <Providers>
           <div id="app-root">
             <a

@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
-import { motion, useReducedMotion, useScroll, useTransform, type MotionValue, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { products } from "@/lib/products";
 import { scrollToElement } from "@/lib/scroll";
+import { asset } from "@/lib/assets";
 import { ArrowDownIcon, ArrowIcon, StarIcon } from "@/components/ui/icons";
 
 type Mood = "comfort" | "style" | "trendy";
@@ -51,15 +51,6 @@ const AVATARS = [
   { t: "SR", c: "bg-coral text-white" },
 ];
 
-/** Scroll-linked drift for one text block (kept on its own wrapper so it never fights the entrance animation). */
-function useDrift(p: MotionValue<number>, x: [number, number], y: [number, number], fadeEnd: number) {
-  const reduced = useReducedMotion();
-  const tx = useTransform(p, [0, 1], x);
-  const ty = useTransform(p, [0, 1], y);
-  const opacity = useTransform(p, [0, fadeEnd], [1, 0]);
-  return reduced ? {} : { x: tx, y: ty, opacity };
-}
-
 const ALT = "A model leaning against a giant red Air Jordan sneaker in deep-red studio smoke";
 
 /**
@@ -70,20 +61,9 @@ const ALT = "A model leaning against a giant red Air Jordan sneaker in deep-red 
  * copy is live HTML positioned in percentages of the stage (sizes in cqw so it scales with the photo).
  */
 export default function Hero({ hasImage }: { hasImage: boolean }) {
-  const ref = useRef<HTMLElement>(null);
   const [mood, setMood] = useState<Mood>("style");
-  const reduced = useReducedMotion();
-  const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const m = MOODS[mood];
 
-  const imgY = useTransform(p, [0, 1], ["0%", "6%"]);
-  const imgScale = useTransform(p, [0, 1], [1, 1.08]);
-  const dTitle = useDrift(p, [0, -150], [0, 0], 0.55);
-  const dSub = useDrift(p, [0, -70], [0, 0], 0.5);
-  const dRight = useDrift(p, [0, 0], [0, -80], 0.5);
-  const dLeftMid = useDrift(p, [0, -60], [0, -30], 0.45);
-  const dFlash = useDrift(p, [0, 60], [0, -40], 0.45);
-  const dBottom = useDrift(p, [0, 0], [0, 50], 0.35);
 
   const onMoodKey = (e: React.KeyboardEvent, i: number) => {
     const dir = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
@@ -95,7 +75,7 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
   };
 
   return (
-    <section id="hero" ref={ref} aria-label="DRIPYARD introduction" className="relative bg-white p-1.5 sm:p-2.5">
+    <section id="hero" aria-label="DRIPYARD introduction" className="relative bg-white p-1.5 sm:p-2.5">
       <div
         data-dark
         className="relative isolate overflow-hidden rounded-[10px] text-white sm:rounded-[14px]"
@@ -108,27 +88,35 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
             animate="show"
             className="relative mx-auto aspect-[1130/2000] w-full [container-type:inline-size] lg:aspect-[1320/746] lg:w-[min(100%,calc((100svh-1.25rem)*1320/746))]"
           >
-            {/* Photograph (feathered into the backdrop at the edges) */}
-            <motion.div
-              style={reduced ? undefined : { y: imgY, scale: imgScale }}
-              className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_9%)] lg:[mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]"
-            >
+            {/* Photograph: native resolution, never scaled or transformed (static = crisp), feathered into the backdrop at the edges */}
+            <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_9%)] lg:[mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
               {hasImage ? (
-                <>
-                  <Image src="/images/hero-phone.webp" alt={ALT} fill quality={90} sizes="100vw" className="object-cover lg:hidden" />
-                  <Image src="/images/hero-desktop.webp" alt={ALT} fill quality={90} sizes="(min-width:1024px) 100vw, 1px" className="hidden object-cover lg:block" />
-                </>
+                <picture>
+                  {/* Laptops and up: 16:9 composition. Phones: portrait composition (750w / 1130w). Only the matching file is downloaded. */}
+                  <source media="(min-width:1024px)" srcSet={asset("/images/hero-desktop.webp")} />
+                  <source media="(max-width:1023px)" srcSet={`${asset("/images/hero-phone-750.webp")} 750w, ${asset("/images/hero-phone.webp")} 1130w`} sizes="100vw" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={asset("/images/hero-phone.webp")}
+                    alt={ALT}
+                    width={1130}
+                    height={2000}
+                    fetchPriority="high"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </picture>
               ) : null}
-            </motion.div>
+            </div>
 
             {/* Headline */}
             <h1 className="display absolute left-[5.8%] top-[11.2%] z-10 lg:left-[4.2%] lg:top-[16%]">
-              <motion.span style={dTitle} className="block overflow-hidden pb-[0.05em]">
+              <motion.span className="sd-hero sd-hero-title block overflow-hidden pb-[0.05em]">
                 <motion.span variants={mask} className="block text-[13.3cqw] leading-[0.95] text-white lg:text-[6.7cqw]">
                   Reimagined
                 </motion.span>
               </motion.span>
-              <motion.span style={dSub} className="block overflow-hidden pb-[0.05em]">
+              <motion.span className="sd-hero sd-hero-sub block overflow-hidden pb-[0.05em]">
                 <motion.span variants={mask} className="block text-[12.3cqw] font-medium leading-[1] text-sun lg:text-[4.8cqw]">
                   Comfort
                 </motion.span>
@@ -136,7 +124,7 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
             </h1>
 
             {/* Supporting headline */}
-            <motion.div style={dLeftMid} className="absolute left-[5.8%] top-[28%] z-10 lg:left-[4.2%] lg:top-[69.5%]">
+            <motion.div className="sd-hero sd-hero-left absolute left-[5.8%] top-[28%] z-10 lg:left-[4.2%] lg:top-[69.5%]">
               <motion.h2 variants={rise} className="text-[max(13px,3.5cqw)] leading-[1.45] lg:text-[max(13px,1.35cqw)] lg:leading-[1.4]">
                 Comfort Evolved
                 <br />
@@ -145,14 +133,14 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
             </motion.div>
 
             {/* Tagline */}
-            <motion.div style={dRight} className="absolute left-[66%] top-[36%] z-10 w-[30%] lg:left-[79%] lg:top-[20%] lg:w-[18.5%]">
+            <motion.div className="sd-hero sd-hero-right absolute left-[66%] top-[36%] z-10 w-[30%] lg:left-[79%] lg:top-[20%] lg:w-[18.5%]">
               <motion.p variants={rise} className="text-[max(11px,2.8cqw)] font-medium leading-[1.4] lg:text-[max(12px,1.1cqw)] lg:font-normal lg:leading-[1.5]">
                 Built For Every Mood, Every Outfit, And Every Move Lace Up And Show Vibe.
               </motion.p>
             </motion.div>
 
             {/* Mood pills + shop link */}
-            <motion.div style={dRight} className="absolute right-[4.7%] top-[48.5%] z-10 lg:left-[79%] lg:right-auto lg:top-[29.8%]">
+            <motion.div className="sd-hero sd-hero-right absolute right-[4.7%] top-[48.5%] z-10 lg:left-[79%] lg:right-auto lg:top-[29.8%]">
               <motion.div variants={rise} className="flex flex-col items-end gap-[max(6px,1.8cqw)] lg:items-start lg:gap-[0.5cqw]">
                 <div role="radiogroup" aria-label="Pick your mood" className="flex flex-col items-end gap-[max(6px,1.8cqw)] lg:flex-row lg:items-start lg:gap-[0.5cqw]">
                   {ORDER.map((key, i) => {
@@ -191,7 +179,7 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
             <span aria-hidden className="absolute left-[5.8%] right-[5.7%] top-[93.9%] h-px bg-white/20 lg:hidden" />
 
             {/* Social proof */}
-            <motion.div style={dBottom} className="absolute left-[5.8%] top-[87.6%] z-10 lg:left-[4.2%] lg:top-[90.3%]">
+            <motion.div className="sd-hero sd-hero-bottom absolute left-[5.8%] top-[87.6%] z-10 lg:left-[4.2%] lg:top-[90.3%]">
               <motion.div variants={rise} className="flex items-center gap-[2.4cqw] lg:gap-[1cqw]">
                 <div className="flex -space-x-[2.4cqw] lg:-space-x-[0.9cqw]" aria-hidden>
                   {AVATARS.map((a) => (
@@ -212,7 +200,7 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
             </motion.div>
 
             {/* Flash drop */}
-            <motion.div style={dFlash} className="absolute right-[5.7%] top-[87.1%] z-10 text-right lg:left-[81%] lg:right-auto lg:top-[68.8%] lg:text-left">
+            <motion.div className="sd-hero sd-hero-flash absolute right-[5.7%] top-[87.1%] z-10 text-right lg:left-[81%] lg:right-auto lg:top-[68.8%] lg:text-left">
               <motion.div variants={rise}>
                 <p className="display text-[max(18px,4.9cqw)] font-medium leading-none lg:text-[max(20px,2.3cqw)]">Flash Drop 25%</p>
                 <p className="mt-[1cqw] text-[max(11px,3cqw)] text-white/70 lg:mt-[0.6cqw] lg:text-[max(12px,1.2cqw)]">Our All New Arrival</p>
@@ -221,7 +209,7 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
 
             {/* Scroll to explore */}
             <div className="absolute inset-x-0 top-[94.6%] z-10 flex justify-center lg:inset-x-auto lg:right-[3.2%] lg:top-[88.6%]">
-              <motion.div style={dBottom}>
+              <motion.div className="sd-hero sd-hero-bottom">
                 <motion.button
                   type="button"
                   onClick={() => scrollToElement(document.getElementById("featured"))}

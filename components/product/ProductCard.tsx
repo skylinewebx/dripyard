@@ -34,7 +34,7 @@ export default function ProductCard({
       product={product}
       priority={priority}
       sizes={sizes ?? "(min-width:1024px) 300px, 50vw"}
-      className="transition-transform duration-[1100ms] ease-premium group-hover:scale-[1.045] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+      className="transition-transform duration-[1100ms] ease-premium group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
     />
   );
 

@@ -68,9 +68,7 @@ function inpaint(x0, y0, x1, y1) {
 RECTS.forEach((r) => inpaint(...r));
 const patched = Buffer.from(px.map((v) => Math.max(0, Math.min(255, Math.round(v)))));
 await sharp(patched, { raw: { width: W, height: H, channels: 3 } })
-  .resize(W * 2, H * 2, { kernel: "lanczos3" })
-  .sharpen({ sigma: 0.8, m1: 0.6, m2: 1.4 })
-  .webp({ quality: 90, effort: 5 })
+  .webp({ quality: 92, effort: 6, smartSubsample: true })
   .toFile("public/images/hero-desktop.webp");
 const out = await sharp("public/images/hero-desktop.webp").metadata();
 console.log("hero-desktop.webp", out.width, out.height);

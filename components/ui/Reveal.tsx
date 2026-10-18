@@ -1,13 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, type CSSProperties } from "react";
+import { observeReveal } from "@/lib/reveal-observer";
 
-/** Scroll-triggered entrance (opacity + transform only, plays once). Honors reduced motion via MotionConfig. */
+/** Scroll-triggered entrance (opacity + transform only, plays once, CSS-driven). Reduced motion shows content immediately. */
 export default function Reveal({
   children,
   delay = 0,
   y = 28,
-  className,
+  className = "",
   as = "div",
 }: {
   children: React.ReactNode;
@@ -16,14 +17,14 @@ export default function Reveal({
   className?: string;
   as?: "div" | "li" | "section" | "article";
 }) {
-  const Comp = motion[as];
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => (ref.current ? observeReveal(ref.current) : undefined), []);
+  const Comp = as as "div";
   return (
     <Comp
-      className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -12% 0px" }}
-      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className={`reveal ${className}`}
+      style={{ "--reveal-y": `${y}px`, "--reveal-delay": `${delay}s` } as CSSProperties}
     >
       {children}
     </Comp>

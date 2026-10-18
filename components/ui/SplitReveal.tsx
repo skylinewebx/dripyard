@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, type CSSProperties } from "react";
+import { observeReveal } from "@/lib/reveal-observer";
 
 /**
- * Heading whose words rise out of a mask one after another when it scrolls into view.
- * `text` may contain "\n" for line breaks. The full text stays available to assistive tech.
+ * Heading whose words rise out of a mask one after another when it scrolls into view (CSS-driven,
+ * transform only). `text` may contain "\n" for line breaks. The full text stays available to assistive tech.
  */
 export default function SplitReveal({
   text,
@@ -19,32 +20,30 @@ export default function SplitReveal({
   className?: string;
   delay?: number;
 }) {
-  const Tag = motion[as];
-  const lines = text.split("\n");
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => (ref.current ? observeReveal(ref.current) : undefined), []);
+  const Tag = as as "h2";
   let n = 0;
   return (
     <Tag
+      ref={ref as React.RefObject<HTMLHeadingElement>}
       id={id}
-      className={className}
+      className={`split ${className}`}
       aria-label={text.replace(/\n/g, " ")}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      transition={{ staggerChildren: 0.06, delayChildren: delay }}
+      style={{ "--split-delay": `${delay}s` } as CSSProperties}
     >
-      {lines.map((line, li) => (
+      {text.split("\n").map((line, li) => (
         <span key={li} aria-hidden className="block">
-          {line.split(" ").map((word) => (
-            <span key={`${li}-${n}`} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
-              <motion.span
-                className="inline-block"
-                variants={{ hidden: { y: "112%" }, show: { y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } } }}
-              >
-                {word}
-                {n++ >= 0 ? " " : ""}
-              </motion.span>
-            </span>
-          ))}
+          {line.split(" ").map((word) => {
+            const i = n++;
+            return (
+              <span key={`${li}-${i}`} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
+                <span className="split-word inline-block" style={{ "--i": i } as CSSProperties}>
+                  {word}&nbsp;
+                </span>
+              </span>
+            );
+          })}
         </span>
       ))}
     </Tag>

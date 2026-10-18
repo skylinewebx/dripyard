@@ -73,9 +73,9 @@ function inpaint(x0, y0, x1, y1) {
 RECTS.forEach((r) => inpaint(...r));
 const patched = Buffer.from(px.map((v) => Math.max(0, Math.min(255, Math.round(v)))));
 await sharp(patched, { raw: { width: W, height: H, channels: 3 } })
-  .resize(Math.round(W * 1.5), Math.round(H * 1.5), { kernel: "lanczos3" })
-  .sharpen({ sigma: 0.8, m1: 0.6, m2: 1.4 })
-  .webp({ quality: 88, effort: 5 })
+  .webp({ quality: 92, effort: 6, smartSubsample: true })
   .toFile("public/images/hero-phone.webp");
+// 750w variant for 2x phones (downscaled, never upscaled)
+await sharp("public/images/hero-phone.webp").resize({ width: 750, kernel: "lanczos3" }).webp({ quality: 92, effort: 6, smartSubsample: true }).toFile("public/images/hero-phone-750.webp");
 const out = await sharp("public/images/hero-phone.webp").metadata();
 console.log("hero-phone.webp", out.width, out.height);

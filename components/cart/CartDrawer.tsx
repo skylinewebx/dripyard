@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useUiStore } from "@/store/ui";
 import { useCartStore } from "@/store/cart";
 import { useDialog } from "@/hooks/use-dialog";
-import { getProduct, imageMeta } from "@/lib/products";
+import { getProduct } from "@/lib/products";
 import { FREE_SHIPPING_THRESHOLD_CENTS, formatCents, formatPrice } from "@/lib/pricing";
 import { useCartSummary } from "./useCartSummary";
 import QuantityStepper from "@/components/product/QuantityStepper";
@@ -30,7 +30,7 @@ function Panel() {
     <>
       <motion.div
         aria-hidden
-        className="fixed inset-0 z-50 bg-maroon/55 backdrop-blur-[2px]"
+        className="fixed inset-0 z-50 bg-maroon/60"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -100,7 +100,6 @@ function Panel() {
               <AnimatePresence initial={false}>
                 {lines.map((l) => {
                   const p = getProduct(l.productId)!;
-                  const meta = imageMeta(p);
                   return (
                     <motion.li
                       key={l.key}
@@ -111,7 +110,7 @@ function Panel() {
                       className="flex gap-4 border-b border-maroon/10 py-4 last:border-b-0"
                     >
                       <Link href={`/product/${p.id}`} onClick={close} className="relative h-28 w-24 shrink-0 overflow-hidden rounded-2xl bg-white">
-                        <Image src={p.image} alt={`${p.name} ${p.colorway}`} fill sizes="96px" className="object-cover" placeholder={meta ? "blur" : "empty"} blurDataURL={meta?.blurDataURL} />
+                        <Image src={p.image} alt={`${p.name} ${p.colorway}`} fill sizes="96px" className="object-cover" />
                       </Link>
                       <div className="flex min-w-0 flex-1 flex-col">
                         <Link href={`/product/${p.id}`} onClick={close} className="text-sm font-semibold leading-snug hover:text-brand">

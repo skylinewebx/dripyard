@@ -30,7 +30,7 @@ export default function Header() {
 
   // Over the hero the header is "open" (floating pieces, as in the campaign design); elsewhere it is one solid pill.
   const overHero = pathname === "/" && !scrolled;
-  const shell = overHero ? "border-transparent text-white" : "border-maroon/10 bg-white/85 text-maroon shadow-card backdrop-blur-xl";
+  const shell = overHero ? "border-transparent text-white" : "border-maroon/10 bg-white/85 text-maroon shadow-card backdrop-blur-lg";
   const navPill = overHero ? "border border-white/25 bg-black/25 backdrop-blur-md" : "";
   const iconBtn =
     "relative grid h-10 w-10 place-items-center rounded-full transition-colors duration-300 " +

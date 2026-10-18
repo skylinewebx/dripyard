@@ -1,10 +1,10 @@
 import Image from "next/image";
 import type { Product } from "@/types";
-import { imageMeta } from "@/lib/products";
 
 /**
- * The only way product photography is rendered: next/image in a stable, fill-sized container
- * with the generated blur-up placeholder. Parent controls aspect ratio and clipping.
+ * The only way product photography is rendered: next/image in a stable, fill-sized container.
+ * No blur placeholder (the container's flat background shows until the photo arrives, so a
+ * low-resolution preview can never linger). Parent controls aspect ratio and clipping.
  */
 export default function ProductImage({
   product,
@@ -21,7 +21,6 @@ export default function ProductImage({
   position?: string;
   alt?: string;
 }) {
-  const meta = imageMeta(product);
   return (
     <Image
       src={product.image}
@@ -29,9 +28,7 @@ export default function ProductImage({
       fill
       sizes={sizes}
       priority={priority}
-      placeholder={meta ? "blur" : "empty"}
-      blurDataURL={meta?.blurDataURL}
-      quality={85}
+      quality={90}
       className={`object-cover ${className}`}
       style={{ objectPosition: position }}
     />
