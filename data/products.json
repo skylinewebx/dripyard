@@ -1,0 +1,914 @@
+[
+  {
+    "id": "aj1-mid-navy-mint",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Navy / Mint",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Navy / Mint",
+        "hex": "#2b4a9b",
+        "families": [
+          "Blue",
+          "Green",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 214,
+    "description": "Mid-top Jordan 1 in crisp white leather with deep navy overlays and a cool mint heel and collar. Padded ankle, Air-Sole cushioning and a rubber cupsole.",
+    "image": "/images/shoes/shoe-01.webp",
+    "isNew": false,
+    "flashDropDiscount": 25,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-lilac-pink",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Lilac / Pink",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Lilac / Pink",
+        "hex": "#9c9acb",
+        "families": [
+          "Purple",
+          "Pink",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 306,
+    "description": "Soft lilac overlays and blush-pink heel panels on a clean white base, finished with oversized matching laces for a pastel take on the Jordan 1 Mid.",
+    "image": "/images/shoes/shoe-02.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-blush-burgundy",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Blush / Burgundy, Gum Sole",
+    "brand": "Nike",
+    "price": 135,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Blush / Burgundy",
+        "hex": "#d9a3a8",
+        "families": [
+          "Pink",
+          "Red",
+          "Cream"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.6,
+    "reviewCount": 148,
+    "description": "Tonal blush leather, mauve overlays and a burgundy Swoosh sit on a warm gum outsole with cream laces. A soft, premium Jordan 1 Mid colorway.",
+    "image": "/images/shoes/shoe-03.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "aj1-high-og-university-blue",
+    "name": "Air Jordan 1 Retro High OG",
+    "colorway": "University Blue",
+    "brand": "Nike",
+    "price": 180,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "University Blue / Black / White",
+        "hex": "#7fa8d9",
+        "families": [
+          "Blue",
+          "White",
+          "Black"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.9,
+    "reviewCount": 812,
+    "description": "The high-top Jordan 1 in tumbled white leather with University Blue overlays and a black Swoosh and collar. Premium materials and a classic Air-Sole unit.",
+    "image": "/images/shoes/shoe-04.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 0,
+      "8": 3,
+      "9": 5,
+      "10": 7,
+      "11": 6,
+      "12": 4,
+      "13": 2
+    },
+    "verification": "Model and 'University Blue' colorway identified from the photo (Nike box visible); confirm against the box SKU."
+  },
+  {
+    "id": "aj1-high-og-lucky-green",
+    "name": "Air Jordan 1 Retro High OG",
+    "colorway": "Lucky Green",
+    "brand": "Nike",
+    "price": 180,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Lucky Green / Black / White",
+        "hex": "#1f9e5b",
+        "families": [
+          "Green",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 540,
+    "description": "High-top Jordan 1 with Lucky Green leather, a black Swoosh and toe, and matching green laces on a white midsole.",
+    "image": "/images/shoes/shoe-05.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 0,
+      "8": 3,
+      "9": 5,
+      "10": 7,
+      "11": 6,
+      "12": 4,
+      "13": 2
+    },
+    "verification": "Model and 'Lucky Green' colorway identified from the photo; confirm against the box SKU."
+  },
+  {
+    "id": "aj1-high-og-royal-reimagined",
+    "name": "Air Jordan 1 Retro High OG",
+    "colorway": "Royal Reimagined",
+    "brand": "Nike",
+    "price": 180,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Royal Blue / Black / White",
+        "hex": "#1c4fd8",
+        "families": [
+          "Blue",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.9,
+    "reviewCount": 677,
+    "description": "Plush royal-blue suede against black nubuck, with a white midsole and a bold blue Swoosh. A reimagined take on the original Jordan 1 look.",
+    "image": "/images/shoes/shoe-06.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 0,
+      "8": 3,
+      "9": 5,
+      "10": 7,
+      "11": 6,
+      "12": 4,
+      "13": 2
+    },
+    "verification": "Model and 'Royal Reimagined' colorway identified from the photo; confirm against the box SKU."
+  },
+  {
+    "id": "aj1-mid-burgundy-velvet",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Burgundy Velvet",
+    "brand": "Nike",
+    "price": 130,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Burgundy / White",
+        "hex": "#8c1d2c",
+        "families": [
+          "Red",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 129,
+    "description": "Rich burgundy velvet overlays on white leather with matching laces, a metallic Wings logo and a burgundy-toothed outsole.",
+    "image": "/images/shoes/shoe-07.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-brown-black",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Brown / Black",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Brown / Black",
+        "hex": "#8a5326",
+        "families": [
+          "Brown",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.6,
+    "reviewCount": 97,
+    "description": "Two-tone brown leather with a black Swoosh, contrast stitching and speckled black laces on a white midsole.",
+    "image": "/images/shoes/shoe-08.webp",
+    "isNew": false,
+    "flashDropDiscount": 25,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "aj1-low-shattered-backboard",
+    "name": "Air Jordan 1 Low",
+    "colorway": "Shattered Backboard",
+    "brand": "Nike",
+    "price": 115,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Orange / Black / White",
+        "hex": "#ef6a1a",
+        "families": [
+          "Orange",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 263,
+    "description": "Low-cut Jordan 1 in black with orange toe and heel accents, a white midsole and a Jumpman tongue tag.",
+    "image": "/images/shoes/shoe-09.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 1,
+      "7": 3,
+      "8": 6,
+      "9": 9,
+      "10": 7,
+      "11": 5,
+      "12": 2,
+      "13": 0
+    },
+    "verification": "Model identified; 'Shattered Backboard' colorway inferred from the orange/black/white scheme, please verify."
+  },
+  {
+    "id": "aj1-low-black-pine-green",
+    "name": "Air Jordan 1 Low",
+    "colorway": "Black / Pine Green",
+    "brand": "Nike",
+    "price": 115,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Black / Pine Green",
+        "hex": "#1d4a37",
+        "families": [
+          "Green",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.6,
+    "reviewCount": 181,
+    "description": "Low-cut Jordan 1 with matte black overlays, a deep pine-green toe and heel, and a gold Jumpman on the tongue.",
+    "image": "/images/shoes/shoe-10.webp",
+    "isNew": false,
+    "flashDropDiscount": 15,
+    "stock": {
+      "6": 1,
+      "7": 3,
+      "8": 6,
+      "9": 9,
+      "10": 7,
+      "11": 5,
+      "12": 2,
+      "13": 0
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "aj1-mid-cream-black",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "Cream / Black",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "Cream / Black",
+        "hex": "#eadfc4",
+        "families": [
+          "Cream",
+          "Black",
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.5,
+    "reviewCount": 76,
+    "description": "Warm cream leather with a black Swoosh and black toe box, chunky cream laces and a black collar for a neutral Jordan 1 Mid.",
+    "image": "/images/shoes/shoe-11.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "af1-low-black-aqua",
+    "name": "Air Force 1 Low",
+    "colorway": "Black / Aqua",
+    "brand": "Nike",
+    "price": 115,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Black / Aqua",
+        "hex": "#38b6df",
+        "families": [
+          "Black",
+          "Blue"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 58,
+    "description": "All-black suede-look upper with an oversized aqua Swoosh, aqua lace tips and a matching aqua sole.",
+    "image": "/images/shoes/shoe-12.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 4,
+      "8": 8,
+      "9": 10,
+      "10": 9,
+      "11": 7,
+      "12": 5,
+      "13": 3
+    },
+    "verification": "Photo carries a customizer credit (@FlystCreations): this looks like a custom colorway, not a Nike general release. Verify before selling."
+  },
+  {
+    "id": "af1-low-black-red-air",
+    "name": "Air Force 1 Low",
+    "colorway": "Black / Red AIR",
+    "brand": "Nike",
+    "price": 115,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Black / Red",
+        "hex": "#c4262e",
+        "families": [
+          "Black",
+          "Red"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.5,
+    "reviewCount": 44,
+    "description": "Triple-black Air Force 1 Low with red AIR piping on the midsole and red heel details.",
+    "image": "/images/shoes/shoe-13.webp",
+    "isNew": false,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0
+    },
+    "verification": "Appears to be a custom or holiday-edition colorway (red AIR line, Santa-hat heel detail). Verify. Catalog entry is set to sold out."
+  },
+  {
+    "id": "af1-low-white-university-red",
+    "name": "Air Force 1 Low",
+    "colorway": "White / University Red",
+    "brand": "Nike",
+    "price": 115,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "White / University Red",
+        "hex": "#e11d2a",
+        "families": [
+          "White",
+          "Red"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 498,
+    "description": "Clean white leather Air Force 1 with a bright University Red lining and outsole and a red AIR mark on the midsole.",
+    "image": "/images/shoes/shoe-14.webp",
+    "isNew": false,
+    "flashDropDiscount": 25,
+    "stock": {
+      "6": 0,
+      "7": 4,
+      "8": 8,
+      "9": 10,
+      "10": 9,
+      "11": 7,
+      "12": 5,
+      "13": 3
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "af1-low-cream-green-gum",
+    "name": "Air Force 1 Low",
+    "colorway": "Cream / Green, Gum Sole",
+    "brand": "Nike",
+    "price": 120,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Cream / Green",
+        "hex": "#1f5c3f",
+        "families": [
+          "Cream",
+          "Green",
+          "Brown"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 152,
+    "description": "Cream leather with a forest-green Swoosh and heel tab, golden collar lining and a gum outsole.",
+    "image": "/images/shoes/shoe-15.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 4,
+      "8": 8,
+      "9": 10,
+      "10": 9,
+      "11": 7,
+      "12": 5,
+      "13": 3
+    },
+    "verification": "Descriptive colorway - official Nike colorway name not verified from the photo."
+  },
+  {
+    "id": "sb-dunk-low-pro-grey-gum",
+    "name": "Nike SB Dunk Low Pro",
+    "colorway": "Grey / Black, Gum Sole",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Grey / Black",
+        "hex": "#6b6b6e",
+        "families": [
+          "Grey",
+          "Black",
+          "Brown"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.6,
+    "reviewCount": 119,
+    "description": "Charcoal suede and black leather with a grey Swoosh, a white midsole and a gum outsole, built on the skate-ready SB Dunk Low Pro.",
+    "image": "/images/shoes/shoe-16.webp",
+    "isNew": false,
+    "flashDropDiscount": 25,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 6,
+      "10": 7,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Model identified as an SB Dunk Low; exact colorway name not verified."
+  },
+  {
+    "id": "aj1-mid-white-teal",
+    "name": "Air Jordan 1 Mid",
+    "colorway": "White / Teal",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "White / Teal",
+        "hex": "#2d6f6b",
+        "families": [
+          "White",
+          "Green"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.7,
+    "reviewCount": 134,
+    "description": "White and grey leather with deep teal overlays and Swoosh, teal collar and Jumpman AIR tongue tag.",
+    "image": "/images/shoes/shoe-17.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 8,
+      "10": 6,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Resembles the 'Oxidized Green' Mid but not confirmed; shown with a descriptive colorway."
+  },
+  {
+    "id": "sb-dunk-low-london",
+    "name": "Nike SB Dunk Low",
+    "colorway": "London",
+    "brand": "Nike",
+    "price": 125,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "Grey / Sail",
+        "hex": "#a09891",
+        "families": [
+          "Grey",
+          "Cream"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 203,
+    "description": "Two-tone grey suede with a sail Swoosh and toe cap, light grey laces and a hand-drawn blue squiggle on the heel.",
+    "image": "/images/shoes/shoe-18.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 0,
+      "7": 2,
+      "8": 5,
+      "9": 6,
+      "10": 7,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "verification": "Model and 'London' colorway identified from the SB box, grey suede and blue squiggle; confirm against the box SKU."
+  },
+  {
+    "id": "af1-low-triple-white",
+    "name": "Air Force 1 '07",
+    "colorway": "Triple White",
+    "brand": "Nike",
+    "price": 115,
+    "category": "Lifestyle",
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#f2f2f2",
+        "families": [
+          "White"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.9,
+    "reviewCount": 1204,
+    "description": "The all-white leather Air Force 1 '07: stitched overlays, perforated toe box, white midsole and Air-Sole cushioning.",
+    "image": "/images/shoes/shoe-19.webp",
+    "isNew": false,
+    "flashDropDiscount": 15,
+    "stock": {
+      "6": 0,
+      "7": 4,
+      "8": 8,
+      "9": 10,
+      "10": 9,
+      "11": 7,
+      "12": 5,
+      "13": 3
+    },
+    "verification": "Model identified as the AF1 '07 Low in triple white."
+  },
+  {
+    "id": "aj1-low-og-chicago",
+    "name": "Air Jordan 1 Low OG",
+    "colorway": "Chicago",
+    "brand": "Nike",
+    "price": 140,
+    "category": "Basketball",
+    "colors": [
+      {
+        "name": "White / Varsity Red / Black",
+        "hex": "#b3202a",
+        "families": [
+          "White",
+          "Red",
+          "Black"
+        ]
+      }
+    ],
+    "sizes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "rating": 4.8,
+    "reviewCount": 356,
+    "description": "Low-top Jordan 1 OG with white leather, varsity red overlays, black Swoosh and a Nike Air tongue label.",
+    "image": "/images/shoes/shoe-20.webp",
+    "isNew": true,
+    "flashDropDiscount": 0,
+    "stock": {
+      "6": 1,
+      "7": 3,
+      "8": 6,
+      "9": 9,
+      "10": 7,
+      "11": 5,
+      "12": 2,
+      "13": 0
+    },
+    "verification": "Model identified; 'Chicago' colorway inferred from the white/red/black scheme and Nike Air tongue, please verify."
+  }
+]

@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Metric-adjusted fallbacks keep text from jumping when the webfonts swap in. */
+@font-face {
+  font-family: "Poppins Fallback";
+  src: local("Arial");
+  size-adjust: 112%;
+  ascent-override: 93%;
+  descent-override: 31%;
+  line-gap-override: 8%;
+}
+
+:root {
+  --maroon: #1a0505;
+  --red: #b3202a;
+  --coral: #d94a4a;
+  --cream: #f6f1ea;
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--cream);
+  color: var(--maroon);
+  font-family: Poppins, "Poppins Fallback", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--coral);
+  color: #fff;
+}
+
+/* Visible, consistent keyboard focus everywhere. */
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.on-dark :focus-visible,
+[data-dark] :focus-visible {
+  outline-color: #fff;
+}
+
+@layer components {
+  .display {
+    @apply font-display font-bold uppercase leading-[0.92] tracking-tight;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-12;
+  }
+  .pill {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-[background-color,color,box-shadow,transform] duration-300 ease-premium;
+  }
+  .pill-solid {
+    @apply pill bg-brand text-white shadow-card hover:bg-maroon;
+  }
+  .pill-ghost {
+    @apply pill border border-maroon/20 bg-white/60 text-maroon hover:border-maroon hover:bg-white;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-brand;
+  }
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px currentColor;
+}
+
+/* Hide scrollbars on horizontal chip rows without removing scrollability. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Native range input styled to the palette. */
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  height: 22px;
+  width: 22px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 2px solid var(--brand, #b3202a);
+  box-shadow: 0 2px 8px rgba(26, 5, 5, 0.25);
+  cursor: grab;
+}
+.range::-moz-range-thumb {
+  pointer-events: auto;
+  height: 18px;
+  width: 18px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 2px solid #b3202a;
+  box-shadow: 0 2px 8px rgba(26, 5, 5, 0.25);
+  cursor: grab;
+}
+.range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(90deg, rgba(26, 5, 5, 0.06) 25%, rgba(26, 5, 5, 0.12) 37%, rgba(26, 5, 5, 0.06) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
