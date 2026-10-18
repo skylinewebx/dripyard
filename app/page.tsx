@@ -7,6 +7,7 @@ import Testimonials from "@/components/home/Testimonials";
 import ElevateBanner from "@/components/home/ElevateBanner";
 import DropCampaign from "@/components/home/DropCampaign";
 import CollectionSection from "@/components/home/CollectionSection";
+import CampaignImage from "@/components/home/CampaignImage";
 import { BANNER_ID, getProduct } from "@/lib/products";
 
 export default function HomePage() {
@@ -22,6 +23,7 @@ export default function HomePage() {
       <ElevateBanner product={banner} />
       <DropCampaign />
       <CollectionSection />
+      <CampaignImage />
     </>
   );
 }
