@@ -32,9 +32,9 @@ scripts/        enhance-images.mjs, prepare-static.mjs
 
 Edit `data/products.json` (an array; every page reads it). Per product: `id` (URL slug), `name`, `colorway`, `price` (USD list price), `category`, `colors[]`, `sizes[]`, `stock` (units per US size, `0` = sold out), `rating`/`reviewCount` (sample data), `isNew`, `flashDropDiscount` (percent), `image`, and `verification` (how the model was identified; shown only in development).
 
-Photos: originals are in `assets/originals/shoe-01..20.jpg`. `npm run images` writes `public/images/shoes/shoe-XX.webp` (Lanczos upscale up to 2x, light exposure correction, mild sharpen; no generative steps) plus blur placeholders. Product `image` points at those files. Each product has one real photo; the gallery shows the full frame plus two close-up crops of that same photo.
+Photos: originals are in `assets/originals/shoe-XX.jpg` and are never modified. `npm run images` re-encodes them as high-quality WebP **at their native resolution** (no upscaling, no sharpening, no colour changes) and adds smaller downscaled variants (`-480`, `-800`, `-1200`, only when smaller than the original) so phones and grid cards download what they display; the static build's image loader (`lib/static-image-loader.ts`) picks the right one. Each product has one real photo; the gallery shows the full frame plus close-ups of that same photo, and a close-up is only offered when the source has enough pixels for it.
 
-**Hero:** place the supplied photo at `public/images/hero.webp`. It is used automatically when present (deep-red fallback otherwise).
+**Hero:** two purpose-made images, switched with `<picture>` (`public/images/hero-phone*.webp` below 1024px, `hero-desktop.webp` above). Rebuild them from the supplied compositions with `node scripts/build-hero-mobile.mjs` and `node scripts/build-hero-desktop.mjs` (they repaint only the baked-in UI text regions; both outputs stay at the source's native resolution).
 
 **Items needing verification** (see each product's `verification` field): colourway names for most Jordan 1 Mid/Low pairs are descriptive, not confirmed official names; `af1-low-black-aqua` and `af1-low-black-red-air` look like custom colourways; no supplied photo is a running shoe, so the Running category is empty.
 
@@ -69,3 +69,7 @@ The Pages deploy (`.github/workflows/deploy.yml`) builds a static export with `S
 ## Known limitations
 
 Sample ratings/testimonials; single photo per product; file-based order ledger; taxes not calculated; no accounts; hero photo must be supplied.
+
+## Performance notes
+
+Scroll reveals use one shared IntersectionObserver plus CSS transitions; parallax/drift effects are native CSS scroll-driven animations (`animation-timeline`, compositor-only, static where unsupported or when reduced motion is requested); Lenis is driven by Framer Motion's single frame loop. Source images that are too small for large or high-DPI displays are listed in the project report: replace the files in `assets/originals/` (or the hero sources in `assets/hero/`) with higher-resolution versions and re-run the scripts.
