@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
+import SplitReveal from "@/components/ui/SplitReveal";
 import { FREE_SHIPPING_THRESHOLD_CENTS, formatPrice } from "@/lib/pricing";
 
 export const metadata: Metadata = { title: "About", description: "What DRIPYARD is, and what it is not." };
@@ -10,7 +11,7 @@ export default function AboutPage() {
     <div className="container-x pb-8 pt-32 sm:pt-40">
       <Reveal className="max-w-4xl">
         <p className="eyebrow">About DRIPYARD</p>
-        <h1 className="display mt-3 text-[clamp(3rem,9vw,7.5rem)]">Built for every mood, outfit and move</h1>
+        <SplitReveal as="h1" className="display mt-3 text-[clamp(3rem,9vw,7.5rem)]" text="Built for every mood, outfit and move" />
       </Reveal>
 
       <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-16">

@@ -1,4 +1,5 @@
 import Reveal from "@/components/ui/Reveal";
+import SplitReveal from "@/components/ui/SplitReveal";
 import Stars from "@/components/ui/Stars";
 
 /** SAMPLE content. Clearly labelled; not verified customer reviews. */
@@ -31,9 +32,7 @@ export default function Testimonials() {
       <div className="container-x">
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Stories</p>
-          <h2 id="stories-title" className="display mt-3 text-[clamp(2.2rem,5.5vw,4.25rem)]">
-            Every Pair Tells A Story, Here&rsquo;s Theirs
-          </h2>
+          <SplitReveal id="stories-title" className="display mt-3 text-[clamp(2.2rem,5.5vw,4.25rem)]" text="Every Pair Tells A Story, Here’s Theirs" />
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <div className="flex -space-x-3" aria-hidden>
               {["AK", "JM", "SR", "TL"].map((t, i) => (

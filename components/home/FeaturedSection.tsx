@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FEATURED_IDS, getProducts } from "@/lib/products";
 import ProductCard from "@/components/product/ProductCard";
 import Reveal from "@/components/ui/Reveal";
+import SplitReveal from "@/components/ui/SplitReveal";
 import { ArrowIcon } from "@/components/ui/icons";
 
 /**
@@ -21,11 +22,7 @@ export default function FeaturedSection() {
         <Reveal className="flex items-end justify-between gap-6">
           <div className="max-w-xl">
             <p className="eyebrow">Featured sneakers</p>
-            <h2 id="featured-title" className="display mt-3 text-[clamp(2.6rem,6.5vw,5rem)]">
-              Pairs worth
-              <br />
-              the hype
-            </h2>
+            <SplitReveal id="featured-title" className="display mt-3 text-[clamp(2.6rem,6.5vw,5rem)]" text={"Pairs worth\nthe hype"} />
           </div>
           <Link href="/shop" className="group hidden shrink-0 items-center gap-2 border-b border-maroon/30 pb-1 text-sm font-medium transition-colors hover:border-brand hover:text-brand sm:inline-flex">
             See all

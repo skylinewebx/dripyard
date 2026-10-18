@@ -1,6 +1,7 @@
 import Link from "next/link";
 import OpenCartButton from "@/components/cart/OpenCartButton";
 import { ArrowIcon } from "@/components/ui/icons";
+import SplitReveal from "@/components/ui/SplitReveal";
 
 const linkCls = "inline-block rounded py-1 text-[15px] text-cream/75 transition-colors hover:text-white";
 
@@ -12,11 +13,7 @@ export default function Footer() {
           <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70">Flash Drop · up to 25% off</p>
-              <h2 id="footer-promo" className="display mt-3 text-[clamp(2.4rem,6vw,4.75rem)] text-white">
-                Step Into
-                <br />
-                Your Best Style
-              </h2>
+              <SplitReveal id="footer-promo" className="display mt-3 text-[clamp(2.4rem,6vw,4.75rem)] text-white" text={"Step Into\nYour Best Style"} />
             </div>
             <div className="max-w-sm">
               <p className="text-[15px] text-white/85">Fresh Air Jordan, Air Force 1 and SB Dunk pairs, curated in one place. Find the one that matches your mood.</p>

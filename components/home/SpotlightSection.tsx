@@ -5,6 +5,7 @@ import ProductPurchase from "@/components/product/ProductPurchase";
 import Price from "@/components/ui/Price";
 import Stars from "@/components/ui/Stars";
 import Reveal from "@/components/ui/Reveal";
+import SplitReveal from "@/components/ui/SplitReveal";
 import DriftText from "@/components/ui/DriftText";
 import { ArrowIcon } from "@/components/ui/icons";
 
@@ -30,9 +31,7 @@ export default function SpotlightSection() {
 
           <Reveal delay={0.1} className="flex flex-col gap-7 lg:sticky lg:top-28 lg:pt-6">
             <div>
-              <h2 id="spotlight-title" className="display text-[clamp(2.6rem,5.5vw,4.5rem)]">
-                {p.name}
-              </h2>
+              <SplitReveal id="spotlight-title" className="display text-[clamp(2.6rem,5.5vw,4.5rem)]" text={p.name} />
               <p className="mt-1 text-lg text-maroon/60">{p.colorway}</p>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
