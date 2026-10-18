@@ -12,7 +12,7 @@ export default function WishlistView() {
 
   if (!ready) {
     return (
-      <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4" aria-busy="true" aria-label="Loading wishlist">
+      <ul className="grid grid-cols-2 gap-x-3 gap-y-9 sm:gap-x-5 sm:gap-y-12 lg:grid-cols-4" aria-busy="true" aria-label="Loading wishlist">
         {Array.from({ length: 4 }, (_, i) => (
           <li key={i}>
             <div className="skeleton aspect-[4/5] rounded-[28px]" />
@@ -41,7 +41,7 @@ export default function WishlistView() {
       <p className="mb-6 text-sm text-maroon/65" role="status">
         <strong className="text-maroon">{items.length}</strong> saved {items.length === 1 ? "pair" : "pairs"}
       </p>
-      <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-x-3 gap-y-9 sm:gap-x-5 sm:gap-y-12 lg:grid-cols-4">
         {items.map((p) => (
           <li key={p.id}>
             <ProductCard product={p} />

@@ -19,7 +19,7 @@ export default function ElevateBanner({ product }: { product: Product }) {
   const word = "text-[clamp(4.6rem,21vw,21rem)] leading-[0.8] whitespace-nowrap";
 
   return (
-    <section ref={ref} data-dark aria-labelledby="elevate-title" className="relative overflow-hidden bg-brand py-16 text-cream sm:py-24">
+    <section ref={ref} data-dark aria-labelledby="elevate-title" className="grain relative overflow-hidden bg-brand py-16 text-cream sm:py-24">
       <h2 id="elevate-title" className="sr-only">
         Elevate your rotation
       </h2>
@@ -29,7 +29,7 @@ export default function ElevateBanner({ product }: { product: Product }) {
       </motion.p>
 
       <div className="relative z-10 mx-auto -my-[7vw] w-[min(74vw,400px)] sm:-my-[4vw]">
-        <motion.div style={{ y: imageY }} className="relative aspect-[3/4] overflow-hidden rounded-[28px] shadow-[0_40px_80px_-24px_rgba(26,5,5,0.7)] ring-1 ring-white/20 sm:rounded-[36px]">
+        <motion.div style={{ y: imageY }} className="relative aspect-[3/4] overflow-hidden rounded-[6px] shadow-[0_30px_60px_-30px_rgba(26,5,5,0.6)]">
           <ProductImage product={product} sizes="(min-width:640px) 400px, 74vw" />
         </motion.div>
       </div>

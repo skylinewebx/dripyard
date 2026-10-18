@@ -135,7 +135,7 @@ export default function ShopClient({ initial }: { initial: ShopFilters }) {
   return (
     <div className="grid gap-8 lg:grid-cols-[272px_1fr] lg:gap-12">
       <aside className="hidden lg:block" aria-label="Filters">
-        <div className="sticky top-28 max-h-[calc(100svh-8rem)] overflow-y-auto rounded-[28px] bg-white/60 p-6 shadow-card ring-1 ring-maroon/5" data-lenis-prevent>
+        <div className="sticky top-28 max-h-[calc(100svh-8rem)] overflow-y-auto border-t border-maroon/15 pt-6" data-lenis-prevent>
           <div className="mb-4 flex items-center justify-between">
             <h2 className="display text-2xl">Filters</h2>
             {active > 0 && (
@@ -208,7 +208,7 @@ export default function ShopClient({ initial }: { initial: ShopFilters }) {
         </div>
 
         {results.length > 0 ? (
-          <ul className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
+          <ul className="mt-6 grid grid-cols-2 gap-x-3 gap-y-9 sm:gap-x-5 sm:gap-y-12 md:grid-cols-3">
             {results.map((p, i) => (
               <motion.li key={p.id} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: Math.min(i, 8) * 0.04, ease: [0.22, 1, 0.36, 1] }}>
                 <ProductCard product={p} priority={i < 3} sizes="(min-width:1024px) 280px, (min-width:768px) 33vw, 50vw" />
@@ -216,7 +216,7 @@ export default function ShopClient({ initial }: { initial: ShopFilters }) {
             ))}
           </ul>
         ) : (
-          <div className="mt-6 grid place-items-center rounded-[32px] bg-white/60 px-6 py-20 text-center shadow-card ring-1 ring-maroon/5">
+          <div className="mt-6 grid place-items-center border-y border-maroon/15 px-6 py-20 text-center">
             <p className="display text-3xl sm:text-4xl">{runningOnly ? "Running drops are on the way" : "No pairs match"}</p>
             <p className="mt-3 max-w-sm text-sm text-maroon/65">
               {runningOnly

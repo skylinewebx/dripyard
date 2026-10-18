@@ -23,7 +23,7 @@ export default function WishlistButton({
 
   const look =
     variant === "floating"
-      ? "h-10 w-10 bg-white/90 shadow-card backdrop-blur hover:bg-white"
+      ? "h-9 w-9 bg-white/75 backdrop-blur-sm hover:bg-white"
       : "h-12 w-12 border border-maroon/15 bg-white hover:border-maroon/40";
 
   return (

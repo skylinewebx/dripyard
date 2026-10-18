@@ -22,7 +22,7 @@ export default function ProductGallery({ product, priority = false }: { product:
 
   return (
     <div className="flex flex-col gap-3 md:flex-row-reverse md:gap-4">
-      <div className="relative aspect-[4/5] flex-1 overflow-hidden rounded-[28px] bg-white shadow-card md:rounded-[36px]">
+      <div className="relative aspect-[4/5] flex-1 overflow-hidden rounded-[6px] bg-[#e6ded2]">
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.div
             key={view.id}
@@ -46,7 +46,7 @@ export default function ProductGallery({ product, priority = false }: { product:
             onClick={() => setIndex(i)}
             aria-pressed={i === index}
             aria-label={`Show ${v.label.toLowerCase()}`}
-            className={`relative h-20 w-16 overflow-hidden rounded-2xl bg-white transition-[box-shadow,opacity] duration-300 sm:h-24 sm:w-[76px] ${
+            className={`relative h-20 w-16 overflow-hidden rounded-[4px] bg-[#e6ded2] transition-[box-shadow,opacity] duration-300 sm:h-24 sm:w-[76px] ${
               i === index ? "opacity-100 ring-2 ring-brand ring-offset-2 ring-offset-cream" : "opacity-70 hover:opacity-100"
             }`}
           >

@@ -6,7 +6,7 @@ const linkCls = "inline-block rounded py-1 text-[15px] text-cream/75 transition-
 
 export default function Footer() {
   return (
-    <footer id="site-footer" data-dark className="relative mt-24 overflow-hidden rounded-t-[40px] bg-maroon text-cream sm:mt-32 sm:rounded-t-[56px]">
+    <footer id="site-footer" data-dark className="grain relative mt-24 overflow-hidden rounded-t-[40px] bg-maroon text-cream sm:mt-32 sm:rounded-t-[56px]">
       <div className="container-x pt-12 sm:pt-16">
         <section aria-labelledby="footer-promo" className="relative overflow-hidden rounded-[32px] bg-brand p-7 sm:rounded-[40px] sm:p-12">
           <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">

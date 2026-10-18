@@ -98,7 +98,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         <h2 id="related-title" className="display text-[clamp(2rem,4.5vw,3.5rem)]">
           You may also like
         </h2>
-        <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+        <ul className="mt-8 grid grid-cols-2 gap-x-3 gap-y-9 sm:gap-x-5 sm:gap-y-12 lg:grid-cols-4">
           {related.map((r) => (
             <li key={r.id}>
               <ProductCard product={r} />
