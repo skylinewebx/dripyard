@@ -29,7 +29,7 @@ jobs:
       - run: npx next build
         env:
           STATIC_EXPORT: "1"
-          NEXT_PUBLIC_BASE_PATH: /dripyard
+          NEXT_PUBLIC_BASE_PATH: ""
           NEXT_PUBLIC_STATIC_DEMO: "1"
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
