@@ -20,12 +20,12 @@
     "height": 1200
   },
   "shoe-06": {
-    "width": 1469,
-    "height": 1836
+    "width": 1200,
+    "height": 1200
   },
   "shoe-07": {
-    "width": 1844,
-    "height": 2305
+    "width": 1200,
+    "height": 1600
   },
   "shoe-08": {
     "width": 722,
@@ -36,52 +36,52 @@
     "height": 921
   },
   "shoe-10": {
-    "width": 1295,
-    "height": 1619
+    "width": 1179,
+    "height": 1401
   },
   "shoe-11": {
     "width": 1080,
     "height": 1341
   },
   "shoe-12": {
-    "width": 1542,
-    "height": 1928
+    "width": 1200,
+    "height": 1200
   },
   "shoe-13": {
-    "width": 887,
-    "height": 1109
+    "width": 736,
+    "height": 726
   },
   "shoe-14": {
-    "width": 1425,
-    "height": 1781
+    "width": 1199,
+    "height": 1243
   },
   "shoe-15": {
     "width": 1200,
     "height": 1200
   },
   "shoe-16": {
-    "width": 805,
-    "height": 1006
+    "width": 720,
+    "height": 960
   },
   "shoe-17": {
-    "width": 703,
-    "height": 879
+    "width": 736,
+    "height": 1104
   },
   "shoe-18": {
     "width": 736,
     "height": 981
   },
   "shoe-19": {
-    "width": 860,
-    "height": 1075
+    "width": 736,
+    "height": 1104
   },
   "shoe-20": {
     "width": 1199,
     "height": 1433
   },
   "shoe-21": {
-    "width": 1424,
-    "height": 1780
+    "width": 1124,
+    "height": 1124
   },
   "shoe-22": {
     "width": 1125,
@@ -116,12 +116,12 @@
     "height": 960
   },
   "shoe-30": {
-    "width": 1279,
-    "height": 1599
+    "width": 1080,
+    "height": 1080
   },
   "shoe-32": {
-    "width": 728,
-    "height": 910
+    "width": 563,
+    "height": 564
   },
   "shoe-33": {
     "width": 735,
@@ -132,19 +132,19 @@
     "height": 956
   },
   "shoe-35": {
-    "width": 868,
-    "height": 1085
+    "width": 736,
+    "height": 736
   },
   "shoe-36": {
-    "width": 951,
-    "height": 1189
+    "width": 736,
+    "height": 920
   },
   "shoe-37": {
-    "width": 740,
-    "height": 925
+    "width": 600,
+    "height": 722
   },
   "shoe-38": {
-    "width": 962,
-    "height": 1203
+    "width": 720,
+    "height": 960
   }
 }
