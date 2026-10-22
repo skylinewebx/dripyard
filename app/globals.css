@@ -280,3 +280,57 @@ body {
   descent-override: 34%;
   line-gap-override: 0%;
 }
+
+/* ---------- Hero atmosphere: slow camera drift, light beam, smoke fallback (background-only mask) ---------- */
+.hero-bgmask {
+  -webkit-mask-image: url("/images/hero-bgmask-phone.png");
+  mask-image: url("/images/hero-bgmask-phone.png");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+@media (min-width: 1024px) {
+  .hero-bgmask {
+    -webkit-mask-image: url("/images/hero-bgmask-desktop.png");
+    mask-image: url("/images/hero-bgmask-desktop.png");
+  }
+}
+.hero-beam {
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 140, 126, 0.1) 50%, transparent 62%);
+  transform: translate3d(0, 0, 0);
+}
+.hero-haze {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.35;
+}
+.hero-haze-a { left: -10%; bottom: -10%; width: 55%; height: 45%; background: #b3202a; }
+.hero-haze-b { right: -8%; top: 5%; width: 45%; height: 40%; background: #7a1218; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-camera {
+    transform-origin: 56% 62%;
+    animation: hero-camera 24s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  .hero-camera.is-paused,
+  .hero-camera.is-paused .hero-beam,
+  .hero-camera.is-paused .hero-haze {
+    animation-play-state: paused;
+  }
+  .hero-beam { animation: hero-beam 16s ease-in-out infinite alternate; }
+  .hero-haze-a { animation: hero-haze-a 20s ease-in-out infinite alternate; }
+  .hero-haze-b { animation: hero-haze-b 26s ease-in-out infinite alternate; }
+}
+/* Symmetric (alternate) loops: there is no visible seam at the turnaround. */
+@keyframes hero-camera {
+  from { transform: scale(1) translate3d(0, 0, 0); }
+  to { transform: scale(1.03) translate3d(-0.5%, -0.4%, 0); }
+}
+@keyframes hero-beam {
+  from { transform: translate3d(0, 0, 0); opacity: 0.55; }
+  to { transform: translate3d(90%, 0, 0); opacity: 1; }
+}
+@keyframes hero-haze-a { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(14%, -8%, 0); } }
+@keyframes hero-haze-b { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-12%, 10%, 0); } }

@@ -13,6 +13,10 @@ import fs from "node:fs";
 import path from "node:path";
 
 const src = "assets/originals";
+// Studio renders (maroon backdrop, shoe pixels untouched) are used only where the cut-out is clean;
+// every other product keeps its original photograph.
+const studioDir = "assets/studio";
+const STUDIO = new Set(["shoe-06", "shoe-07", "shoe-10", "shoe-12", "shoe-13", "shoe-14", "shoe-16", "shoe-17", "shoe-19", "shoe-21", "shoe-30", "shoe-32", "shoe-35", "shoe-36", "shoe-37", "shoe-38"]);
 const out = "public/images/shoes";
 const VARIANTS = [480, 800, 1200];
 fs.rmSync(out, { recursive: true, force: true });
@@ -24,7 +28,8 @@ const variants = {};
 
 for (const file of fs.readdirSync(src).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort()) {
   const id = path.parse(file).name;
-  const input = sharp(path.join(src, file)).rotate();
+  const studioFile = path.join(studioDir, `${id}.webp`);
+  const input = STUDIO.has(id) && fs.existsSync(studioFile) ? sharp(studioFile) : sharp(path.join(src, file)).rotate();
   const info = await input.metadata();
   await input.clone().webp(WEBP).toFile(path.join(out, `${id}.webp`));
 

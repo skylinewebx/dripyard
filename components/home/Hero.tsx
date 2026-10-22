@@ -6,6 +6,7 @@ import { motion, type Variants } from "framer-motion";
 import { products } from "@/lib/products";
 import { scrollToElement } from "@/lib/scroll";
 import { asset } from "@/lib/assets";
+import HeroAtmosphere from "./HeroAtmosphere";
 import { ArrowDownIcon, ArrowIcon, StarIcon } from "@/components/ui/icons";
 
 type Mood = "comfort" | "style" | "trendy";
@@ -89,7 +90,9 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
             className="relative mx-auto aspect-[1130/2000] w-full [container-type:inline-size] lg:aspect-[1320/746] lg:w-[min(100%,calc((100svh-1.25rem)*1320/746))]"
           >
             {/* Photograph: native resolution, never scaled or transformed (static = crisp), feathered into the backdrop at the edges */}
-            <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_9%)] lg:[mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+            <div className="absolute inset-0 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_9%)] lg:[mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+              {/* Cinematic layer: slow camera drift on photo + atmosphere together (so they stay registered). The photo itself is never altered. */}
+              <div className="hero-camera absolute inset-0">
               {hasImage ? (
                 <picture>
                   {/* Laptops and up: 16:9 composition. Phones: portrait composition (750w / 1130w). Only the matching file is downloaded. */}
@@ -107,6 +110,8 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
                   />
                 </picture>
               ) : null}
+              {hasImage ? <HeroAtmosphere /> : null}
+              </div>
             </div>
 
             {/* Headline */}
