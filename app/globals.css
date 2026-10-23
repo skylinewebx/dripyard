@@ -297,7 +297,7 @@ body {
   }
 }
 .hero-beam {
-  background: linear-gradient(105deg, transparent 38%, rgba(255, 140, 126, 0.1) 50%, transparent 62%);
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 140, 126, 0.2) 50%, transparent 62%);
   transform: translate3d(0, 0, 0);
 }
 .hero-haze {
@@ -311,7 +311,7 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   .hero-camera {
     transform-origin: 56% 62%;
-    animation: hero-camera 24s ease-in-out infinite alternate;
+    animation: hero-camera 14s ease-in-out infinite alternate;
     will-change: transform;
   }
   .hero-camera.is-paused,
@@ -319,14 +319,14 @@ body {
   .hero-camera.is-paused .hero-haze {
     animation-play-state: paused;
   }
-  .hero-beam { animation: hero-beam 16s ease-in-out infinite alternate; }
+  .hero-beam { animation: hero-beam 10s ease-in-out infinite alternate; }
   .hero-haze-a { animation: hero-haze-a 20s ease-in-out infinite alternate; }
   .hero-haze-b { animation: hero-haze-b 26s ease-in-out infinite alternate; }
 }
 /* Symmetric (alternate) loops: there is no visible seam at the turnaround. */
 @keyframes hero-camera {
   from { transform: scale(1) translate3d(0, 0, 0); }
-  to { transform: scale(1.03) translate3d(-0.5%, -0.4%, 0); }
+  to { transform: scale(1.07) translate3d(-1.4%, -1.0%, 0); }
 }
 @keyframes hero-beam {
   from { transform: translate3d(0, 0, 0); opacity: 0.55; }
@@ -334,3 +334,27 @@ body {
 }
 @keyframes hero-haze-a { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(14%, -8%, 0); } }
 @keyframes hero-haze-b { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-12%, 10%, 0); } }
+
+/* ---------- Elevate banner: words and sneaker glide in from the sides as the section scrolls into view ---------- */
+@keyframes el-left {
+  0% { transform: translate3d(-70%, 0, 0); opacity: 0; }
+  45% { transform: translate3d(0, 0, 0); opacity: 1; }
+  100% { transform: translate3d(6%, 0, 0); opacity: 1; }
+}
+@keyframes el-right {
+  0% { transform: translate3d(70%, 0, 0); opacity: 0; }
+  45% { transform: translate3d(0, 0, 0); opacity: 1; }
+  100% { transform: translate3d(-6%, 0, 0); opacity: 1; }
+}
+@keyframes el-shoe {
+  0% { transform: translate3d(55vw, 0, 0) rotate(8deg); opacity: 0; }
+  45% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 1; }
+  100% { transform: translate3d(-3vw, -2%, 0) rotate(-1.5deg); opacity: 1; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .el-left { animation: el-left cubic-bezier(0.22, 0.61, 0.36, 1) both; animation-timeline: view(); animation-range: cover 0% cover 55%; animation-duration: auto; }
+    .el-right { animation: el-right cubic-bezier(0.22, 0.61, 0.36, 1) both; animation-timeline: view(); animation-range: cover 0% cover 55%; animation-duration: auto; }
+    .el-shoe { animation: el-shoe cubic-bezier(0.22, 0.61, 0.36, 1) both; animation-timeline: view(); animation-range: cover 0% cover 55%; animation-duration: auto; }
+  }
+}

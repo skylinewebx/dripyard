@@ -27,13 +27,13 @@ float fbm(vec2 p){
 void main(){
   vec2 uv = gl_FragCoord.xy / uRes;
   vec2 p = vec2(uv.x * uRes.x / uRes.y, uv.y) * 2.4;
-  float t = uTime * 0.05;
+  float t = uTime * 0.1;
   vec2 q = vec2(fbm(p + vec2(0.0, -t * 1.6)), fbm(p + vec2(5.2, 1.3) - t));
   float n = fbm(p + 1.8 * q + vec2(t * 0.5, -t * 1.2));
   float smoke = smoothstep(0.34, 0.86, n);
   // a little denser near the floor and the sides, thinner overhead
   float shape = mix(1.0, 0.55, smoothstep(0.0, 1.0, uv.y)) * (0.75 + 0.25 * abs(uv.x - 0.5) * 2.0);
-  float a = smoke * shape * 0.5;
+  float a = smoke * shape * 0.85;
   vec3 col = mix(vec3(0.42, 0.04, 0.07), vec3(0.88, 0.24, 0.22), n);
   gl_FragColor = vec4(col * a, a);
 }`;
