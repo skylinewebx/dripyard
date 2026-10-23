@@ -6,7 +6,7 @@ import { motion, type Variants } from "framer-motion";
 import { products } from "@/lib/products";
 import { scrollToElement } from "@/lib/scroll";
 import { asset } from "@/lib/assets";
-import HeroAtmosphere from "./HeroAtmosphere";
+import HeroVideo from "./HeroVideo";
 import { ArrowDownIcon, ArrowIcon, StarIcon } from "@/components/ui/icons";
 
 type Mood = "comfort" | "style" | "trendy";
@@ -91,8 +91,8 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
           >
             {/* Photograph: native resolution, never scaled or transformed (static = crisp), feathered into the backdrop at the edges */}
             <div className="absolute inset-0 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_9%)] lg:[mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
-              {/* Cinematic layer: slow camera drift on photo + atmosphere together (so they stay registered). The photo itself is never altered. */}
-              <div className="hero-camera absolute inset-0">
+              {/* Photograph = poster and fallback; the looping video fades in on top of it once it plays. */}
+              <div className="absolute inset-0">
               {hasImage ? (
                 <picture>
                   {/* Laptops and up: 16:9 composition. Phones: portrait composition (750w / 1130w). Only the matching file is downloaded. */}
@@ -110,7 +110,7 @@ export default function Hero({ hasImage }: { hasImage: boolean }) {
                   />
                 </picture>
               ) : null}
-              {hasImage ? <HeroAtmosphere /> : null}
+              {hasImage ? <HeroVideo /> : null}
               </div>
             </div>
 
