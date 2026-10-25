@@ -3,6 +3,7 @@ import "@fontsource-variable/oswald";
 import "@fontsource/poppins/latin-400.css";
 import "@fontsource/poppins/latin-500.css";
 import "@fontsource/poppins/latin-600.css";
+import "@fontsource/poppins/latin-800.css";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 import Providers from "@/components/providers/Providers";

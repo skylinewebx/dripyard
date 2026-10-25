@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { asset } from "@/lib/assets";
 
-const DESKTOP = "/videos/hero-loop.mp4"; // 1320x746, 12 s seamless loop
-const PHONE = "/videos/hero-loop-phone.mp4"; // 720x1274, 12 s seamless loop
+const DESKTOP = "/videos/hero-loop.mp4"; // 1440x814, 12 s seamless loop
+const PHONE = "/videos/hero-loop-phone.mp4"; // 720x1280, 12 s seamless loop
 
 /**
  * Looping hero video (muted, inline, autoplay). It sits on top of the hero photograph, which stays as the

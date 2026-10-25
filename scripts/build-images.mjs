@@ -13,10 +13,10 @@ import fs from "node:fs";
 import path from "node:path";
 
 const src = "assets/originals";
-// Studio renders (maroon backdrop, shoe pixels untouched) are used only where the cut-out is clean;
-// every other product keeps its original photograph.
-const studioDir = "assets/studio";
-const STUDIO = new Set([]); // studio renders disabled: all products use their original photographs
+// White studio renders (assets/white: the shoe pixels untouched on a white backdrop with a soft contact shadow).
+// A few photos can't be cut out cleanly (hand, box or white soles on light ground); those keep their original photograph.
+const studioDir = "assets/white";
+const KEEP_ORIGINAL = new Set(["shoe-01", "shoe-02", "shoe-03", "shoe-04", "shoe-22", "shoe-23", "shoe-25", "shoe-26"]);
 const out = "public/images/shoes";
 const VARIANTS = [480, 800, 1200];
 fs.rmSync(out, { recursive: true, force: true });
@@ -29,7 +29,7 @@ const variants = {};
 for (const file of fs.readdirSync(src).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort()) {
   const id = path.parse(file).name;
   const studioFile = path.join(studioDir, `${id}.webp`);
-  const input = STUDIO.has(id) && fs.existsSync(studioFile) ? sharp(studioFile) : sharp(path.join(src, file)).rotate();
+  const input = !KEEP_ORIGINAL.has(id) && fs.existsSync(studioFile) ? sharp(studioFile) : sharp(path.join(src, file)).rotate();
   const info = await input.metadata();
   await input.clone().webp(WEBP).toFile(path.join(out, `${id}.webp`));
 
