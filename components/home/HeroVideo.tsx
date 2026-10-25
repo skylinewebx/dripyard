@@ -10,16 +10,16 @@ const PHONE = "/videos/hero-loop-phone.mp4"; // 720x1274, 12 s seamless loop
 /**
  * Looping hero video (muted, inline, autoplay). It sits on top of the hero photograph, which stays as the
  * poster/fallback: the photo shows until the first frame is ready, and remains if the video can't play.
- * Visitors who prefer reduced motion get a Play button instead of autoplay. Playback pauses while the hero
- * is off-screen or the tab is hidden.
+ * The motion is slow and subtle, so it autoplays for everyone; visitors who prefer reduced motion also get a
+ * Pause button. Playback pauses while the hero is off-screen or the tab is hidden.
  */
 export default function HeroVideo() {
   const reduced = useReducedMotion();
   const ref = useRef<HTMLVideoElement>(null);
   const [src, setSrc] = useState<string | null>(null);
   const [playing, setPlaying] = useState(false);
-  const [manual, setManual] = useState(false); // a reduced-motion visitor chose to play the video
-  const allowed = !reduced || manual;
+  const [paused, setPaused] = useState(false); // the visitor chose to stop the video
+  const allowed = !paused;
 
   useEffect(() => {
     if (!allowed) {
@@ -59,11 +59,11 @@ export default function HeroVideo() {
   const toggle = reduced ? (
     <button
       type="button"
-      onClick={() => setManual((m) => !m)}
-      aria-pressed={manual}
+      onClick={() => setPaused((m) => !m)}
+      aria-pressed={paused}
       className="pointer-events-auto absolute bottom-[3%] left-1/2 z-10 -translate-x-1/2 rounded-full bg-black/55 px-4 py-2 text-xs font-medium text-white backdrop-blur transition hover:bg-black/75"
     >
-      {manual ? "Pause background video" : "Play background video"}
+      {paused ? "Play background video" : "Pause background video"}
     </button>
   ) : null;
 
