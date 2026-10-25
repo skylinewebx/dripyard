@@ -281,26 +281,34 @@ body {
   line-gap-override: 0%;
 }
 
-/* ---------- Elevate banner: words and sneaker glide in from the sides as the section scrolls into view ---------- */
-@keyframes el-left {
-  0% { transform: translate3d(-70%, 0, 0); opacity: 0; }
-  45% { transform: translate3d(0, 0, 0); opacity: 1; }
-  100% { transform: translate3d(6%, 0, 0); opacity: 1; }
+/* Drifting embers for the product-story section (static dots, slow opacity pulse; off for reduced motion) */
+.embers { position: relative; }
+.embers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 8% 18%, #ff7a55 0 1.6px, transparent 3.2px),
+    radial-gradient(circle at 17% 64%, #ff5a3c 0 1.2px, transparent 2.8px),
+    radial-gradient(circle at 26% 36%, #ff8a5c 0 1.8px, transparent 3.4px),
+    radial-gradient(circle at 34% 82%, #ff6648 0 1.3px, transparent 2.8px),
+    radial-gradient(circle at 43% 12%, #ff7a55 0 1.2px, transparent 2.6px),
+    radial-gradient(circle at 52% 58%, #ff9a6a 0 1.6px, transparent 3px),
+    radial-gradient(circle at 61% 28%, #ff5a3c 0 1.5px, transparent 3px),
+    radial-gradient(circle at 69% 76%, #ff7a55 0 1.8px, transparent 3.4px),
+    radial-gradient(circle at 78% 14%, #ff6648 0 1.2px, transparent 2.6px),
+    radial-gradient(circle at 86% 48%, #ff8a5c 0 1.6px, transparent 3px),
+    radial-gradient(circle at 93% 84%, #ff5a3c 0 1.3px, transparent 2.8px),
+    radial-gradient(circle at 4% 90%, #ff9a6a 0 1.5px, transparent 3px),
+    radial-gradient(circle at 48% 92%, #ff6648 0 1.8px, transparent 3.4px),
+    radial-gradient(circle at 96% 8%, #ff7a55 0 1.4px, transparent 3px);
+  opacity: 0.8;
 }
-@keyframes el-right {
-  0% { transform: translate3d(70%, 0, 0); opacity: 0; }
-  45% { transform: translate3d(0, 0, 0); opacity: 1; }
-  100% { transform: translate3d(-6%, 0, 0); opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .embers::before { animation: embers-pulse 5s ease-in-out infinite alternate; }
 }
-@keyframes el-shoe {
-  0% { transform: translate3d(55vw, 0, 0) rotate(8deg); opacity: 0; }
-  45% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 1; }
-  100% { transform: translate3d(-3vw, -2%, 0) rotate(-1.5deg); opacity: 1; }
-}
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .el-left { animation: el-left cubic-bezier(0.22, 0.61, 0.36, 1) both; animation-timeline: view(); animation-range: cover 0% cover 55%; animation-duration: auto; }
-    .el-right { animation: el-right cubic-bezier(0.22, 0.61, 0.36, 1) both; animation-timeline: view(); animation-range: cover 0% cover 55%; animation-duration: auto; }
-    .el-shoe { animation: el-shoe cubic-bezier(0.22, 0.61, 0.36, 1) both; animation-timeline: view(); animation-range: cover 0% cover 55%; animation-duration: auto; }
-  }
+@keyframes embers-pulse {
+  from { opacity: 0.35; transform: translate3d(0, 6px, 0); }
+  to { opacity: 0.95; transform: translate3d(0, -10px, 0); }
 }

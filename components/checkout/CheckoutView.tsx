@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useCartSummary } from "@/components/cart/useCartSummary";
 import { startCheckout, type CheckoutFailure } from "@/lib/checkout-client";
-import { getProduct } from "@/lib/products";
+import { getProduct, imageMeta } from "@/lib/products";
 import { FREE_SHIPPING_THRESHOLD_CENTS, formatCents, formatPrice } from "@/lib/pricing";
 
 const STATIC_DEMO = process.env.NEXT_PUBLIC_STATIC_DEMO === "1";
@@ -66,7 +66,7 @@ export default function CheckoutView() {
             return (
               <li key={l.key} className="flex gap-4 py-4">
                 <Link href={`/product/${p.id}`} className="relative h-24 w-20 shrink-0 overflow-hidden rounded-2xl bg-white">
-                  <Image src={p.image} alt={`${p.name} ${p.colorway}`} fill sizes="80px" className="object-cover" />
+                  <Image src={p.image} alt={`${p.name} ${p.colorway}`} fill sizes="80px" className={imageMeta(p)?.studio ? "object-contain" : "object-cover"} />
                 </Link>
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold">{p.name}</p>

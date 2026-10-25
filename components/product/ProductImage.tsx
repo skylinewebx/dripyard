@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Product } from "@/types";
+import { imageMeta } from "@/lib/products";
 
 /**
  * The only way product photography is rendered: next/image in a stable, fill-sized container.
@@ -29,7 +30,7 @@ export default function ProductImage({
       sizes={sizes}
       priority={priority}
       quality={90}
-      className={`object-cover ${className}`}
+      className={`${imageMeta(product)?.studio ? "bg-white object-contain" : "object-cover"} ${className}`}
       style={{ objectPosition: position }}
     />
   );

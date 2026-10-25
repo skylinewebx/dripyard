@@ -1,150 +1,187 @@
 {
   "shoe-01": {
     "width": 904,
-    "height": 1145
+    "height": 1145,
+    "studio": false
   },
   "shoe-02": {
     "width": 1125,
-    "height": 1125
+    "height": 1125,
+    "studio": false
   },
   "shoe-03": {
     "width": 735,
-    "height": 865
+    "height": 865,
+    "studio": false
   },
   "shoe-04": {
     "width": 749,
-    "height": 926
+    "height": 926,
+    "studio": false
   },
   "shoe-05": {
-    "width": 860,
-    "height": 1075
+    "width": 865,
+    "height": 1081,
+    "studio": true
   },
   "shoe-06": {
     "width": 1380,
-    "height": 1725
+    "height": 1725,
+    "studio": true
   },
   "shoe-07": {
-    "width": 1733,
-    "height": 2166
+    "width": 1740,
+    "height": 2175,
+    "studio": true
   },
   "shoe-08": {
-    "width": 1078,
-    "height": 1348
+    "width": 1080,
+    "height": 1350,
+    "studio": true
   },
   "shoe-09": {
-    "width": 665,
-    "height": 831
+    "width": 668,
+    "height": 835,
+    "studio": true
   },
   "shoe-10": {
     "width": 1216,
-    "height": 1520
+    "height": 1520,
+    "studio": true
   },
   "shoe-11": {
     "width": 1440,
-    "height": 1800
+    "height": 1800,
+    "studio": true
   },
   "shoe-12": {
     "width": 1449,
-    "height": 1811
+    "height": 1811,
+    "studio": true
   },
   "shoe-13": {
     "width": 887,
-    "height": 1109
+    "height": 1109,
+    "studio": true
   },
   "shoe-14": {
     "width": 1413,
-    "height": 1766
+    "height": 1766,
+    "studio": true
   },
   "shoe-15": {
-    "width": 1012,
-    "height": 1265
+    "width": 1028,
+    "height": 1285,
+    "studio": true
   },
   "shoe-16": {
     "width": 805,
-    "height": 1006
+    "height": 1006,
+    "studio": true
   },
   "shoe-17": {
-    "width": 703,
-    "height": 879
+    "width": 704,
+    "height": 880,
+    "studio": true
   },
   "shoe-18": {
-    "width": 768,
-    "height": 960
+    "width": 770,
+    "height": 963,
+    "studio": true
   },
   "shoe-19": {
-    "width": 860,
-    "height": 1075
+    "width": 864,
+    "height": 1080,
+    "studio": true
   },
   "shoe-20": {
     "width": 1214,
-    "height": 1518
+    "height": 1518,
+    "studio": true
   },
   "shoe-21": {
     "width": 1337,
-    "height": 1671
+    "height": 1671,
+    "studio": true
   },
   "shoe-22": {
     "width": 1125,
-    "height": 1078
+    "height": 1078,
+    "studio": false
   },
   "shoe-23": {
     "width": 1199,
-    "height": 1377
+    "height": 1377,
+    "studio": false
   },
   "shoe-24": {
     "width": 1300,
-    "height": 1625
+    "height": 1625,
+    "studio": true
   },
   "shoe-25": {
     "width": 736,
-    "height": 791
+    "height": 791,
+    "studio": false
   },
   "shoe-26": {
     "width": 720,
-    "height": 960
+    "height": 960,
+    "studio": false
   },
   "shoe-27": {
-    "width": 1154,
-    "height": 1443
+    "width": 1159,
+    "height": 1449,
+    "studio": true
   },
   "shoe-28": {
     "width": 1278,
-    "height": 1598
+    "height": 1598,
+    "studio": true
   },
   "shoe-29": {
-    "width": 887,
-    "height": 1109
+    "width": 892,
+    "height": 1115,
+    "studio": true
   },
   "shoe-30": {
     "width": 1205,
-    "height": 1506
+    "height": 1506,
+    "studio": true
   },
   "shoe-32": {
     "width": 684,
-    "height": 855
+    "height": 855,
+    "studio": true
   },
   "shoe-33": {
-    "width": 845,
-    "height": 1056
+    "width": 852,
+    "height": 1065,
+    "studio": true
   },
   "shoe-34": {
-    "width": 730,
-    "height": 913
+    "width": 738,
+    "height": 923,
+    "studio": true
   },
   "shoe-35": {
-    "width": 868,
-    "height": 1085
+    "width": 869,
+    "height": 1086,
+    "studio": true
   },
   "shoe-36": {
     "width": 894,
-    "height": 1118
+    "height": 1118,
+    "studio": true
   },
   "shoe-37": {
     "width": 695,
-    "height": 869
+    "height": 869,
+    "studio": true
   },
   "shoe-38": {
     "width": 904,
-    "height": 1130
+    "height": 1130,
+    "studio": true
   }
 }

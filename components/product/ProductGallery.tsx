@@ -23,7 +23,9 @@ const VIEW_DEFS = [
 export default function ProductGallery({ product, priority = false }: { product: Product; priority?: boolean }) {
   const [index, setIndex] = useState(0);
   const views = useMemo(() => {
-    const native = imageMeta(product)?.width ?? 0;
+    const meta = imageMeta(product);
+    if (meta?.studio) return [{ ...VIEW_DEFS[0], scale: 1 }]; // studio shots show the whole shoe; no cropped close-ups
+    const native = meta?.width ?? 0;
     const zoom = Math.min(1.7, native / STAGE_PX);
     return VIEW_DEFS.map((v, i) => ({ ...v, scale: i === 0 ? 1 : zoom })).filter((v, i) => i === 0 || v.scale >= 1.25);
   }, [product]);

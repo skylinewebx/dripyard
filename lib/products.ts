@@ -15,7 +15,7 @@ export const getProduct = (id: string): Product | undefined => byId.get(id);
 export const getProducts = (ids: string[]) =>
   ids.map((id) => byId.get(id)).filter((p): p is Product => Boolean(p));
 
-type ImageMeta = Record<string, { width: number; height: number }>;
+type ImageMeta = Record<string, { width: number; height: number; studio?: boolean }>;
 
 export function imageMeta(p: Pick<Product, "image">) {
   const key = p.image.split("/").pop()!.replace(/\.\w+$/, "");

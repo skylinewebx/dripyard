@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Product } from "@/types";
-import { formatPrice, listPriceCents, unitPriceCents } from "@/lib/pricing";
+import { formatCents, listPriceCents, unitPriceCents } from "@/lib/pricing";
 import { sizeStock, totalStock } from "@/lib/products";
 import { useCartStore } from "@/store/cart";
 import { useUiStore } from "@/store/ui";
@@ -75,15 +75,19 @@ export default function ProductStory({ items }: { items: Product[] }) {
   };
 
   return (
-    <>
+    <section id="featured-story" aria-labelledby="story-title" className="relative -mb-24 sm:-mb-32">
       {/* Product detail */}
-      <section id="featured-story" aria-labelledby="story-title" className="bg-cream pb-20 pt-16 sm:pb-28 sm:pt-24">
+      <div className="bg-cream pb-20 pt-16 sm:pb-28 sm:pt-24">
         <div className="container-x">
           <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.04fr)_minmax(0,1fr)] lg:gap-16">
             <Reveal>
-              <div className="overflow-hidden rounded-[22px] bg-white shadow-[0_40px_80px_-50px_rgba(26,5,5,0.45)] ring-1 ring-maroon/10">
-                <div className="relative aspect-[4/5]">
-                  <ProductImage key={p.id} product={p} sizes="(min-width:1024px) 600px, 92vw" priority={false} />
+              <div
+                className="embers relative overflow-hidden rounded-[22px] p-[6%] shadow-[0_40px_80px_-40px_rgba(26,5,5,0.7)]"
+                style={{ background: "radial-gradient(70% 60% at 25% 20%, #8a1620 0%, #4a0b11 55%, #1a0508 100%)" }}
+              >
+                <div aria-hidden className="pointer-events-none absolute -right-[10%] top-[8%] h-[60%] w-[70%] rounded-full bg-[#d94a4a]/25 blur-3xl" />
+                <div className="relative mx-auto aspect-square w-full overflow-hidden rounded-[16px] bg-white shadow-[0_30px_60px_-30px_rgba(0,0,0,0.8)]">
+                  <ProductImage key={p.id} product={p} sizes="(min-width:1024px) 560px, 86vw" priority={false} />
                 </div>
               </div>
               <ul className="mt-4 grid grid-cols-4 gap-3" aria-label="Choose a sneaker">
@@ -105,16 +109,16 @@ export default function ProductStory({ items }: { items: Product[] }) {
 
             <Reveal delay={0.08}>
               <p className="eyebrow">Heepzy · {p.category}</p>
-              <h2 id="story-title" className="display mt-3 text-[clamp(2.3rem,5vw,4.2rem)] normal-case">
-                {p.name}
+              <h2 id="story-title" className="display mt-3 text-[clamp(2.1rem,4.1vw,3.6rem)] normal-case">
+                Heepzy {p.name}
               </h2>
               <p className="mt-1 text-lg text-maroon/70">{p.colorway}</p>
               <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-maroon/75">{p.description}</p>
 
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
                 <p className="flex items-baseline gap-3">
-                  <span className={`text-4xl font-semibold ${sale < list ? "text-brand" : ""}`}>{formatPrice(sale)}</span>
-                  {sale < list && <span className="text-lg text-maroon/50 line-through">{formatPrice(list)}</span>}
+                  <span className={`text-4xl font-semibold ${sale < list ? "text-brand" : ""}`}>{formatCents(sale)}</span>
+                  {sale < list && <span className="text-lg text-maroon/50 line-through">{formatCents(list)}</span>}
                 </p>
                 <p className="flex items-center gap-2 text-sm">
                   <Stars rating={p.rating} size={16} />
@@ -190,15 +194,15 @@ export default function ProductStory({ items }: { items: Product[] }) {
             </Reveal>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Stories */}
-      <section
-        id="story-reviews"
+      <div
         aria-labelledby="reviews-title"
+        role="region"
         data-dark
-        // Extends over the footer's top margin so the footer's rounded corners sit on the same maroon (no cream seam).
-        className="grain relative -mb-24 overflow-hidden pb-44 pt-20 text-white sm:-mb-32 sm:pb-60 sm:pt-28"
+        // The wrapper extends over the footer's top margin so the footer's rounded corners sit on the same maroon (no cream seam).
+        className="grain embers relative overflow-hidden pb-44 pt-20 text-white sm:pb-60 sm:pt-28"
         style={{
           background:
             "radial-gradient(60% 50% at 18% 20%, rgba(179,32,42,0.45) 0%, rgba(179,32,42,0) 70%), radial-gradient(55% 45% at 85% 70%, rgba(217,74,74,0.28) 0%, rgba(217,74,74,0) 70%), linear-gradient(to bottom, #2a070b 0%, #1a0505 60%, #1a0505 100%)",
@@ -245,7 +249,7 @@ export default function ProductStory({ items }: { items: Product[] }) {
           </ul>
           <p className="mt-8 text-center text-xs text-white/50">Sample stories for this demonstration storefront. They are not verified customer reviews.</p>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -29,7 +29,8 @@ const variants = {};
 for (const file of fs.readdirSync(src).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort()) {
   const id = path.parse(file).name;
   const studioFile = path.join(studioDir, `${id}.webp`);
-  const input = !KEEP_ORIGINAL.has(id) && fs.existsSync(studioFile) ? sharp(studioFile) : sharp(path.join(src, file)).rotate();
+  const studio = !KEEP_ORIGINAL.has(id) && fs.existsSync(studioFile);
+  const input = studio ? sharp(studioFile) : sharp(path.join(src, file)).rotate();
   const info = await input.metadata();
   await input.clone().webp(WEBP).toFile(path.join(out, `${id}.webp`));
 
@@ -42,7 +43,7 @@ for (const file of fs.readdirSync(src).filter((f) => /\.(jpe?g|png|webp)$/i.test
   }
   widths.push(info.width);
   variants[id] = widths;
-  meta[id] = { width: info.width, height: info.height };
+  meta[id] = { width: info.width, height: info.height, studio };
   console.log(`${id}: native ${info.width}x${info.height}, variants ${widths.join("/")}`);
 }
 
