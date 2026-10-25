@@ -16,6 +16,8 @@ const src = "assets/originals";
 // White studio renders (assets/white: the shoe pixels untouched on a white backdrop with a soft contact shadow).
 // A few photos can't be cut out cleanly (hand, box or white soles on light ground); those keep their original photograph.
 const studioDir = "assets/white";
+// Off: every product uses its real, original photograph (the white studio renders in assets/white are kept but unused).
+const USE_WHITE_STUDIO = false;
 const KEEP_ORIGINAL = new Set(["shoe-01", "shoe-02", "shoe-03", "shoe-04", "shoe-22", "shoe-23", "shoe-25", "shoe-26"]);
 const out = "public/images/shoes";
 const VARIANTS = [480, 800, 1200];
@@ -29,7 +31,7 @@ const variants = {};
 for (const file of fs.readdirSync(src).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort()) {
   const id = path.parse(file).name;
   const studioFile = path.join(studioDir, `${id}.webp`);
-  const studio = !KEEP_ORIGINAL.has(id) && fs.existsSync(studioFile);
+  const studio = USE_WHITE_STUDIO && !KEEP_ORIGINAL.has(id) && fs.existsSync(studioFile);
   const input = studio ? sharp(studioFile) : sharp(path.join(src, file)).rotate();
   const info = await input.metadata();
   await input.clone().webp(WEBP).toFile(path.join(out, `${id}.webp`));
